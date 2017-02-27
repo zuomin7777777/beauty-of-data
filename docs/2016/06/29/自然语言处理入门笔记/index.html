@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.19" />
+
+
+<title>自然语言处理入门笔记 - Lithium Theme</title>
+<meta property="og:title" content="自然语言处理入门笔记 - Lithium Theme">
+
+
+
+  
+
+
+
+
+
+
+
+<link rel="stylesheet" href="../../../../css/fonts.css" media="all">
+<link rel="stylesheet" href="../../../../css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="../../../../" class="nav-logo">
+    <img src="../../../../images/logo.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="../../../../about/">About</a></li>
+    
+    <li><a href="https://github.com/elara7">GitHub</a></li>
+    
+    <li><a href="http://weibo.com/elara">Weibo</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">1 min read</span>
+    
+
+    <h1 class="article-title">自然语言处理入门笔记</h1>
+
+    
+    <span class="article-date">2016/06/29</span>
+    
+
+    <div class="article-content">
+      <h2 id="自然语言处理入门笔记">自然语言处理入门笔记</h2>
+
+<h3 id="统计语言模型">统计语言模型</h3>
+
+<ol>
+<li>现代自然语言处理方法基于统计学而非规则设计。通过规则设计难以分析复杂句子并且无法快速对新生用语做出反应。<br /></li>
+</ol>
+
+<p></p>
+
+<ol>
+<li>句子出现概率：<br />
+一个句子S由一连串特定排列的词$w_1,w_2,\dots,w_n$构成，其中n为句子长度，那么根据条件概率公式，这个句子在文本中出现个概率为$$P(s)=P(w_1)P(w_2|w_1)P(w_3|w_1,w_2) \dots P(w_n|w_1,w_2,\dots)$$<br /></li>
+<li>显然，对于上述句子出现概率的算法太过复杂，因此引入一些假设进行简化。如引入马尔科夫假设，即假设每个词出现个概率都只和前一个词有关，与其他词无关，则句子出现概率可以简化为$$P(s)=P(w_1)P(w_2|w_1)P(w_3|w_2) \dots $$,此即为所谓的二元模型（bigram model），同理若假设每个词出现的概率只和前面N个词有关，则可建立N元模型。模型元数越多越复杂，越难估计。<br /></li>
+<li>对于每个词出现的条件概率可化为$$P(w_i|w_j)=\frac{P(w_i,w_j)}{P(w_j)}$$，（这里如果是二元模型则j=i-1），其中每个词或2个词出现的概率可用其频率进行估计，即$$P(w_i,w_j) = \frac{count(w_j,w_i)}{count}$$,$$P(w_j) = \frac{count(w_j)}{count}$$，所以$$P(w_i|w_j) = \frac{count(w_j,w_i)}{count(w_j)}$$<br /></li>
+<li>然而很多词及其组合出现频率较小，甚至在样本中无法出现，解决办法：古德-图灵估计。从概率的总量中分配一小部分给没有在样本中观察到的事件，同时对看得见的事件中，出现频率小的事件再调小其概率（即“越是不可信的统计折扣越多”）。具体来说，如果在语料库中出现r次的词有$N_r$个，对于出现频率较小的词（r较小），计算其概率时用更小的概率$d_r=(r+1)\frac{N_R}{N_r}/count$,这里R=r+1,则没有出现的词有$d_0=N_1/N_0$,得到一个很小的正数概率，从而解决这个问题。即当$$count(w_i) &lt;= T$$,$$P(w_i) = \frac{count(w_i)}{count}$$,否则$$P(w_i) = d_r=(r+1)\frac{N_R}{N_r}$$。同理对于$$P(w_i|w_j)$$也可以类似处理，经过古德-图灵方法打折求条件概率的方法叫卡茨退避法。其中T是一个阈值一般是8-10左右。<br /></li>
+<li>训练模型的语料库的选取，要根据模型应用的领域进行。训练模型的过程基本上和训练隐马儿可夫模型类似，需要一个训练算法（鲍姆-韦尔奇算法）和使用的解码算法（维特比算法）。<br /></li>
+</ol>
+
+<h3 id="分词算法">分词算法</h3>
+
+<ol>
+<li>思想：假设一个句子有N种分法，每种分法都可以根据上述方法求出这个句子出现的概率。那么最优的分法就是让这个句子出现概率最大的分法。（极大似然的思想）<br /></li>
+<li>实现方法：对每种分法都进行计算显然计算量太大，通常转换成一个动态规划问题，根据维特比算法找到最佳分词。</li>
+<li>算法已经得到较高的准确度，再深入研究进行准确度的提升已经不容易。同时不同的人之间分词都有差异，机器分词的准确率小幅度的差异并不能作为评判好坏的唯一标准。<br /></li>
+<li>分词的颗粒度：即对一个整体词的细分程度，如清华大学是否要再分为清华和大学。一个分词器一般都可以由用户自行决定颗粒度。完善用于再细分的复合词的词典（通过数据挖掘）是近年中文分词工作重点。<br /></li>
+</ol>
+
+<h3 id="信息论概念">信息论概念</h3>
+
+<ol>
+<li>信息熵：H(X),事件X或者信息X内涵的信息量。H(X|Y)：条件熵，已知Y条件下H事件的信息量。更多：[中文信息熵](&ldquo;<a href="http://dsd.future-lab.cn/members/2015nlp/readings/%E6%B1%89%E8%AF%AD%E4%BF%A1%E6%81%AF%E7%86%B5%E5%92%8C%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%A4%8D%E6%9D%82%E5%BA%A6.pdf&quot;">http://dsd.future-lab.cn/members/2015nlp/readings/%E6%B1%89%E8%AF%AD%E4%BF%A1%E6%81%AF%E7%86%B5%E5%92%8C%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%A4%8D%E6%9D%82%E5%BA%A6.pdf&quot;</a>)<br /></li>
+<li>互信息：两个随机事件相关性的度量方法（类似相关系数，但是相关系数要用于随机变量），定义为$$I(X;Y)=\sum P(x,y)log\frac{P(x,y)}{P(x)P(y)}=H(X)-H(X|Y)$$。应用：机器翻译的时候Bush可以翻译为布什和灌木丛，做法是先从大量文本中找出和布什一起出现的互信息最大的词，同理找出和灌木丛一起出现的互信息最大的词，则翻译的时候看上下文哪一类词多就可以了。<br /></li>
+<li>相对熵。<br /></li>
+</ol>
+
+<h3 id="关键词权重度量方法-tf-idf">关键词权重度量方法：TF-IDF</h3>
+
+<p>TF:term frequency,单文本词频，即一组关键词的各个词，在文本中出现的频率之和（若只是一个词，则就是这个词的频率）。但是如果直接根据分词从一个句子中分出的词可能含有“的”这种没用的词，叫做停止词，应当被忽略。只用TF会使得关键词只能体现高频词，而无法体现一些特定场合才会出现的重要词汇。所以还要用一个权重IDF：inverse document frequency，逆文本频率指数，公式为$log\frac{D}{D_w}$，D是总文章数或者总网页数（语料库总数），$D_w$是语料库中含有某个词的文章数或网页数。则一个关键词w的TF-IDF值为$TF_w \cdot IDF_w$，一组词或者一句话的TF-IDF值为$\sum TF_i \cdot IDF_i$,i对应这句话中的每个词（去掉停止词，或者说停止词权重设定为0）。TF-IDF度量的是一句话或者一个词在一篇文本或者一个网页中的重要度。</p>
+
+<h3 id="文本特征向量">文本特征向量</h3>
+
+<p>对一篇文本的所有实词（虚词对于文本的内容没有太大信息量，可以认为是噪音，剔除后可以提高效率），计算其TF-IDF值，然后按照词汇表中每个词的位置（如词汇表中第一个词是阿，第二个是啊，第700个是服装），把文章中出现的词TF-IDF对应放到对应位置，没有出现的词设定TF-IDF为0，那么就得到长度和词汇表词数相等的一个向量，这个向量就是这篇文章的特征向量。<br />
+若要度量文本的相似度，就可以直接计算不同文本的特征向量的余弦距离。从而达到文本聚类的目的，首先把文本两两计算余弦距离，最近的分为一类，划分成几个小类，把小类中的文本全部合并当成一篇，计算其特征向量作为类的特征向量，再次计算余弦距离，再次分类，以此类推直到相关性很弱，停止聚类。另外，出现在标题等重要位置的词的意义应该更大，可以调整权重使其权重更大。</p>
+
+<h3 id="奇异值分解-svd-singular-value-decomposition">奇异值分解（SVD：singular value decomposition）</h3>
+
+<p>如果有N个词，M篇文本，如果把每篇文本的特征向量作为一行，则M篇文本可以合并成一个M行N列的矩阵。通过SVD可以得到3个矩阵X B Y，X是一个Mxn的矩阵，每一行表示一篇文本，每一列表示一个主题（假设分解出了n个主题），则每个元素表示这篇文本与这个主题的相关性。Y为一个nxN的矩阵，则每一列表示一个词，每一行表示一个词类，每个元素表示这个词与这个词类的相关性。B为一个nxn矩阵，每一行表示一个主题，每一列表示一个词类，每个元素则表示一个词类和一个主题的相关性。通过SVD就可以粗略地把一个语料库中的所有文本进行主题分类和词类分类（近义词分类）。这和前面的余弦距离聚类相比，优点是速度更快，不需要一次次迭代，缺点是精度不足且内存需求大。可以先进行SVD作为粗分类，再用余弦距离法继续迭代。</p>
+
+<h3 id="几个模型">几个模型</h3>
+
+<ol>
+<li>马尔可夫链：每个状态的取值取决于前面有限个状态。<br /></li>
+<li>贝叶斯网络：各个事物之间的关系不止是一条链，而是一个网络，即每个状态可能和很多个其他状态有关，但是马尔可夫假设成立，每个状态都和他直接相连的状态有关，这种有向图就是贝叶斯网络<br /></li>
+<li>条件随机场：如果贝叶斯网络成为一个无向图，则为条件随机场。</li>
+</ol>
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="../../../../index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="../../../../images/hugo-logo.png" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+    
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<script async type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+    
+  </body>
+</html>
+
