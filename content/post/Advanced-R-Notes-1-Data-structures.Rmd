@@ -15,8 +15,6 @@ Elara
 
 
 Thanks for Hadley Wickham. Source available on github (https://github.com/hadley/adv-r/).
-
-<!--more--> 
  
 - 分类：atomic vectors，lists
 - 通用属性：
@@ -44,34 +42,19 @@ lists是一个内含元素type不同的向量，内含元素可以是一个list
  list(list(list(list())))会得到一个嵌套list（no flat）         
 
 
-```r
+```{r}
 x <- list(list(list(list())))
 str(x)
-```
-
-```
-## List of 1
-##  $ :List of 1
-##   ..$ :List of 1
-##   .. ..$ : list()
 ```
 
  list(list(1, 2), c(3, 4)) 内含2个item，第一个是list，第二个是c                
  c(list(1, 2), c(3, 4))会变成一个list，4个item，每个item一个数字               
 
 
-```r
+```{r}
 x <- list(list(1, 2), c(3, 4))
 y <- c(list(1, 2), c(3, 4))
 str(x)
-```
-
-```
-## List of 2
-##  $ :List of 2
-##   ..$ : num 1
-##   ..$ : num 2
-##  $ : num [1:2] 3 4
 ```
 
  unlist().把不同type的item转化成同一种type。
@@ -95,40 +78,20 @@ is.numeric and is character are totally different.
 - Test your knowledge of vector coercion rules by predicting the output of the following uses of c():
 
 
-```r
+```{r}
 c(1, FALSE)
 ```
 
-```
-## [1] 1 0
-```
-
-```r
+```{r}
 c("a", 1)
 ```
 
-```
-## [1] "a" "1"
-```
-
-```r
+```{r}
 c(list(1), "a")
 ```
 
-```
-## [[1]]
-## [1] 1
-## 
-## [[2]]
-## [1] "a"
-```
-
-```r
+```{r}
 c(TRUE, 1L)
-```
-
-```
-## [1] 1 1
 ```
 
 - Why do you need to use unlist() to convert a list to an atomic vector? Why doesn’t as.vector() work?
@@ -142,20 +105,12 @@ Equivalent to "1"=="1", -1<0, "one"<"2"
 - Why is the default missing value, NA, a logical vector? What’s special about logical vectors?(Hint: think about c(FALSE, NA_character_).)
 
 
-```r
+```{r}
 str(NA)
 ```
 
-```
-##  logi NA
-```
-
-```r
+```{r}
 c(FALSE, NA_character_)
-```
-
-```
-## [1] "FALSE" NA
 ```
 
 I can't understand well. If u know the answer please tell me. Thx~
@@ -165,119 +120,65 @@ I can't understand well. If u know the answer please tell me. Thx~
 Attributes是所有object都有的，用于储存额外信息（如名字，特定说明文本等）
 
 
-```r
+```{r}
 y <- 1:10
 attr(y, "my_attribute") <- "This is a vector"
 attr(y, "my_attribute")
 ```
 
-```
-## [1] "This is a vector"
-```
-
-```r
+```{r}
 str(attributes(y))
 ```
 
-```
-## List of 1
-##  $ my_attribute: chr "This is a vector"
-```
-
-```r
+```{r}
 structure(1:10, my_attribute = "This is a vector")
 ```
 
-```
-##  [1]  1  2  3  4  5  6  7  8  9 10
-## attr(,"my_attribute")
-## [1] "This is a vector"
-```
-
-```r
+```{r}
 # most attributes are lost when modifying a vector,unless Names,Dimensions,Class
 attributes(y[1])
 ```
 
-```
-## NULL
-```
-
-```r
+```{r}
 attributes(sum(y))
-```
-
-```
-## NULL
 ```
 
 ## Names
 
 
-```r
+```{r}
 c(a = 1, b = 2, c = 3)
 ```
 
-```
-## a b c 
-## 1 2 3
-```
-
-```r
+```{r}
 x <- 1:3; names(x) <- c("a", "b", "c")
 setNames(1:3, c("a", "b", "c"))
 ```
 
-```
-## a b c 
-## 1 2 3
-```
-
-```r
+```{r}
 y <- c(a = 1, 2, 3); names(y)
 ```
 
-```
-## [1] "a" ""  ""
-```
-
-```r
+```{r}
 z <- c(1, 2, 3); names(z)
-```
-
-```
-## NULL
 ```
 
 ## Factors
 
 一个factor是一个vector，但只能包含预定的值，并且用于存储分类变量。Factor是在一个integer vector的基础上加入2个特殊的attribute，class为factor，levels为预先设定的允许值。
 
-```r
+```{r}
 x <- factor(c("a", "b", "b", "a"));levels(x)
 ```
 
-```
-## [1] "a" "b"
-```
-
-```r
+```{r}
 # You can't use values that are not in the levels
 x[2] <- "c"
 ```
 
-```
-## Warning in `[<-.factor`(`*tmp*`, 2, value = "c"): invalid factor level, NA
-## generated
-```
-
-```r
+```{r}
 # you can't combine factors
 c(factor("a"), factor("b"))
-```
-
-```
-## [1] 1 1
 ```
 
 While factors look (and often behave) like character vectors, they are actually integers. Be careful
@@ -291,49 +192,32 @@ vectors if you need string-like behaviour.
 - An early draft used this code to illustrate structure():
 
 
-```r
+```{r}
 structure(1:5, comment = "my attribute")
 ```
 
-```
-## [1] 1 2 3 4 5
-```
 
 But when you print that object you don’t see the comment attribute. Why? Is the attribute missing, or is there something else special about it? (Hint: try using help.)
 
 
-```r
+```{r}
 str(structure(1:5, comment = "my attribute"))
 ```
 
-```
-##  atomic [1:5] 1 2 3 4 5
-##  - attr(*, "comment")= chr "my attribute"
-```
 
 It is a special case of not printing.
 
 - What happens to a factor when you modify its levels?
 
 
-```r
+```{r}
 f1 <- factor(letters)
 f1
 ```
 
-```
-##  [1] a b c d e f g h i j k l m n o p q r s t u v w x y z
-## Levels: a b c d e f g h i j k l m n o p q r s t u v w x y z
-```
-
-```r
+```{r}
 levels(f1) <- rev(levels(f1))
 f1
-```
-
-```
-##  [1] z y x w v u t s r q p o n m l k j i h g f e d c b a
-## Levels: z y x w v u t s r q p o n m l k j i h g f e d c b a
 ```
 
 vector和level都倒排
@@ -341,24 +225,14 @@ vector和level都倒排
 - What does this code do? How do f2 and f3 differ from f1?
 
 
-```r
+```{r}
 f2 <- rev(factor(letters))
 f2
 ```
 
-```
-##  [1] z y x w v u t s r q p o n m l k j i h g f e d c b a
-## Levels: a b c d e f g h i j k l m n o p q r s t u v w x y z
-```
-
-```r
+```{r}
 f3 <- factor(letters, levels = rev(letters))
 f3
-```
-
-```
-##  [1] a b c d e f g h i j k l m n o p q r s t u v w x y z
-## Levels: z y x w v u t s r q p o n m l k j i h g f e d c b a
 ```
 
 f2只倒排vector，f3只倒排level。
@@ -372,24 +246,12 @@ Adding a **dim()** attribute to an atomic vector allows it to behave like a mult
 - What does dim() return when applied to a vector?
 
 
-```r
+```{r}
 x <- 1:5;dim(x);class(x)
 ```
 
-```
-## NULL
-```
-
-```
-## [1] "integer"
-```
-
-```r
+```{r}
 dim(x)=c(1,5);class(x)
-```
-
-```
-## [1] "matrix"
 ```
 
 - If is.matrix(x) is TRUE, what will is.array(x) return?
@@ -398,61 +260,16 @@ True.
 
 - How would you describe the following three objects? What makes them different to 1:5?
 
-```r
+```{r}
 x1 <- array(1:5, c(1, 1, 5));x1
 ```
 
-```
-## , , 1
-## 
-##      [,1]
-## [1,]    1
-## 
-## , , 2
-## 
-##      [,1]
-## [1,]    2
-## 
-## , , 3
-## 
-##      [,1]
-## [1,]    3
-## 
-## , , 4
-## 
-##      [,1]
-## [1,]    4
-## 
-## , , 5
-## 
-##      [,1]
-## [1,]    5
-```
-
-```r
+```{r}
 x2 <- array(1:5, c(1, 5, 1));x2
 ```
 
-```
-## , , 1
-## 
-##      [,1] [,2] [,3] [,4] [,5]
-## [1,]    1    2    3    4    5
-```
-
-```r
+```{r}
 x3 <- array(1:5, c(5, 1, 1));x3
-```
-
-```
-## , , 1
-## 
-##      [,1]
-## [1,]    1
-## [2,]    2
-## [3,]    3
-## [4,]    4
-## [5,]    5
 ```
 
 ## Data frames  
@@ -460,29 +277,17 @@ x3 <- array(1:5, c(5, 1, 1));x3
 a data frame is a list of equal-length vectors.data frame是一个list
 
 
-```r
+```{r}
 df <- data.frame(x = 1:3, y = c("a", "b", "c"))
 typeof(df)
 ```
 
-```
-## [1] "list"
-```
-
-```r
+```{r}
 class(df)
 ```
 
-```
-## [1] "data.frame"
-```
-
-```r
+```{r}
 is.data.frame(df)
-```
-
-```
-## [1] TRUE
 ```
 
 - a data frame has names(), colnames(),and rownames(), although names() and colnames() are the same thing. The length() of a data frame is the length of the underlying list and so is the same as ncol(); nrow() gives the number of rows.
@@ -494,27 +299,13 @@ Beware data.frame()’s default behaviour which turns strings into factors. Use 
 - You can combine data frames using cbind() and rbind():
 
 
-```r
+```{r}
 cbind(df, data.frame(z = 3:1))
 ```
 
-```
-##   x y z
-## 1 1 a 3
-## 2 2 b 2
-## 3 3 c 1
-```
 
-```r
+```{r}
 rbind(df, data.frame(x = 10, y = "z"))
-```
-
-```
-##    x y
-## 1  1 a
-## 2  2 b
-## 3  3 c
-## 4 10 z
 ```
 
 按列（左右连接）bind的时候，行要一样多，行名会被忽略。按行（上下连接）bind的时候，列数和列名都要一致。Use plyr::rbind.fill() to combine data frames that don’t have the same columns.
@@ -522,17 +313,10 @@ rbind(df, data.frame(x = 10, y = "z"))
 - Since a data frame is a list of vectors, it is possible for a data frame to have a column that is a list:
 
 
-```r
+```{r}
 df <- data.frame(x = 1:3)
 df$y <- list(1:2, 1:3, 1:4)
 df
-```
-
-```
-##   x          y
-## 1 1       1, 2
-## 2 2    1, 2, 3
-## 3 3 1, 2, 3, 4
 ```
 
 list的item数量要和原有的向量长度一致
@@ -540,7 +324,7 @@ list的item数量要和原有的向量长度一致
 However, when a list is given to data.frame(), it tries to put each item of the list into its own
 
 
-```r
+```{r}
 #data.frame(x = 1:3, y = list(1:2, 1:3, 1:4))
 #> Error in data.frame(1:2, 1:3, 1:4, check.names = FALSE, stringsAsFactors = TRUE):
 #arguments imply differing number of rows: 2, 3, 4
@@ -551,40 +335,21 @@ data.frame()不能混合atomic vector和list
 A workaround is to use I(), which causes data.frame() to treat the list as one unit:
 
 
-```r
+```{r}
 dfl <- data.frame(x = 1:3, y = I(list(1:2, 1:3, 1:4)))
 dfl
 ```
 
-```
-##   x          y
-## 1 1       1, 2
-## 2 2    1, 2, 3
-## 3 3 1, 2, 3, 4
-```
 
-```r
+```{r}
 str(dfl)
 ```
 
-```
-## 'data.frame':	3 obs. of  2 variables:
-##  $ x: int  1 2 3
-##  $ y:List of 3
-##   ..$ : int  1 2
-##   ..$ : int  1 2 3
-##   ..$ : int  1 2 3 4
-##   ..- attr(*, "class")= chr "AsIs"
-```
 
-```r
+```{r}
 dfl[2, "y"]
 ```
 
-```
-## [[1]]
-## [1] 1 2 3
-```
 
 ## Exercises
 

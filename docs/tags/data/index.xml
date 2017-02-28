@@ -25,7 +25,6 @@
 &lt;li&gt;&lt;p&gt;当 &lt;span class=&#34;math inline&#34;&gt;\(X_1&amp;lt;0\)&lt;/span&gt; 或者当 &lt;span class=&#34;math inline&#34;&gt;\(Y&amp;lt;0\)&lt;/span&gt; , &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; 发生缺失，为MNAR&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;对于完全随机缺失，直接剔除一般不会带来偏误，而对于非完全随机缺失，由于缺失值出现的位置可能和其他变量有关联，带来的后果则相对复杂得多。&lt;/p&gt;
-&lt;!-- more --&gt;
 &lt;div class=&#34;section level3&#34;&gt;
 &lt;h3&gt;常见处理方法&lt;/h3&gt;
 &lt;div class=&#34;section level4&#34;&gt;

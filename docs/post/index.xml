@@ -73,7 +73,6 @@
 &lt;li&gt;&lt;p&gt;当 &lt;span class=&#34;math inline&#34;&gt;\(X_1&amp;lt;0\)&lt;/span&gt; 或者当 &lt;span class=&#34;math inline&#34;&gt;\(Y&amp;lt;0\)&lt;/span&gt; , &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; 发生缺失，为MNAR&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;对于完全随机缺失，直接剔除一般不会带来偏误，而对于非完全随机缺失，由于缺失值出现的位置可能和其他变量有关联，带来的后果则相对复杂得多。&lt;/p&gt;
-&lt;!-- more --&gt;
 &lt;div class=&#34;section level3&#34;&gt;
 &lt;h3&gt;常见处理方法&lt;/h3&gt;
 &lt;div class=&#34;section level4&#34;&gt;
@@ -554,7 +553,6 @@ apply(data,2,miss)&lt;/code&gt;&lt;/pre&gt;
 &lt;h1&gt;Advanced R Notes 1.Data structures&lt;/h1&gt;
 &lt;p&gt;Elara&lt;/p&gt;
 &lt;p&gt;Thanks for Hadley Wickham. Source available on github (&lt;a href=&#34;https://github.com/hadley/adv-r/&#34; class=&#34;uri&#34;&gt;https://github.com/hadley/adv-r/&lt;/a&gt;).&lt;/p&gt;
-&lt;!--more--&gt;
 &lt;ul&gt;
 &lt;li&gt;分类：atomic vectors，lists&lt;/li&gt;
 &lt;li&gt;通用属性： type，typeof（），内含的元素的type（如logical,integer,double(numeric),character等）。所有元素type都相同则为atomic vectors，不同为lists。&lt;br /&gt;
@@ -684,8 +682,7 @@ setNames(1:3, c(&amp;quot;a&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;c&amp;qu
 &lt;pre&gt;&lt;code&gt;## [1] &amp;quot;a&amp;quot; &amp;quot;b&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# You can&amp;#39;t use values that are not in the levels
 x[2] &amp;lt;- &amp;quot;c&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning in `[&amp;lt;-.factor`(`*tmp*`, 2, value = &amp;quot;c&amp;quot;): invalid factor level, NA
-## generated&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning in `[&amp;lt;-.factor`(`*tmp*`, 2, value = &amp;quot;c&amp;quot;): 因子层次有错，产生了NA&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# you can&amp;#39;t combine factors
 c(factor(&amp;quot;a&amp;quot;), factor(&amp;quot;b&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] 1 1&lt;/code&gt;&lt;/pre&gt;
