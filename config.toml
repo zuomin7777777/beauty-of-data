@@ -1,8 +1,8 @@
 publishDir = "docs"
 baseurl = "/"
 relativeurls = true
-languageCode = "en-us"
-title = "Lithium Theme"
+languageCode = "zh-CN"
+title = "Beauty of Data"
 theme = "hugo-lithium-theme"
 googleAnalytics = ""
 disqusShortname = ""

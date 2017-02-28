@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="zh-CN">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Hugo 0.19" />
 
 
-<title>Advanced R Notes 1.Data structures - Lithium Theme</title>
-<meta property="og:title" content="Advanced R Notes 1.Data structures - Lithium Theme">
+<title>Advanced R Notes 1.Data structures - Beauty of Data</title>
+<meta property="og:title" content="Advanced R Notes 1.Data structures - Beauty of Data">
 
 
 
@@ -18,16 +18,8 @@
 
 
 
-
-
-<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/github.min.css' rel='stylesheet' type='text/css'>
-
-
-
-<link rel="stylesheet" href="../../../../css/fonts.css" media="all">
 <link rel="stylesheet" href="../../../../css/main.css" media="all">
-
-
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400|Lato:400,400italic,700">
 
   </head>
   <body>
@@ -35,9 +27,9 @@
       <header class="header">
         <nav class="nav">
   <a href="../../../../" class="nav-logo">
-    <img src="../../../../images/logo.png"
-         width="50"
-         height="50"
+    <img src="../../../../images/logo.png" 
+         width="50" 
+         height="50" 
          alt="Logo">
   </a>
 
@@ -65,363 +57,215 @@
     <h1 class="article-title">Advanced R Notes 1.Data structures</h1>
 
     
-    <span class="article-date">2016/07/07</span>
+    <span class="article-date">July 7, 2016</span>
     
 
     <div class="article-content">
-      <h1 id="advanced-r-notes-1-data-structures">Advanced R Notes 1.Data structures</h1>
+      <!-- BLOGDOWN-HEAD -->
+<!-- /BLOGDOWN-HEAD -->
 
+<!-- BLOGDOWN-BODY-BEFORE -->
+<!-- /BLOGDOWN-BODY-BEFORE -->
+<div id="advanced-r-notes-1.data-structures" class="section level1">
+<h1>Advanced R Notes 1.Data structures</h1>
 <p>Elara</p>
-
-<p>Thanks for Hadley Wickham. Source available on github (<a href="https://github.com/hadley/adv-r/">https://github.com/hadley/adv-r/</a>).</p>
-
-<p></p>
-
+<p>Thanks for Hadley Wickham. Source available on github (<a href="https://github.com/hadley/adv-r/" class="uri">https://github.com/hadley/adv-r/</a>).</p>
+<!--more-->
 <ul>
 <li>分类：atomic vectors，lists</li>
-<li>通用属性：
-type，typeof（），内含的元素的type（如logical,integer,double(numeric),character等）。所有元素type都相同则为atomic vectors，不同为lists。<br />
+<li>通用属性： type，typeof（），内含的元素的type（如logical,integer,double(numeric),character等）。所有元素type都相同则为atomic vectors，不同为lists。<br />
 Length，length（），元素个数（向量长度）<br />
-Attributes，attributes（），额外的信息<br /></li>
-<li>区分：
-is.vector（）：当且仅当object是一个除了names以外，没有其他额外attributes的vector的时候，返回true
-is.atomic（）：测试是否是一个atomic vector
-is.list（）：测试是否是一个list
-<br /></li>
+Attributes，attributes（），额外的信息<br />
+</li>
+<li>区分： is.vector（）：当且仅当object是一个除了names以外，没有其他额外attributes的vector的时候，返回true is.atomic（）：测试是否是一个atomic vector is.list（）：测试是否是一个list</li>
 </ul>
-
-<h3 id="atomic-vector">Atomic vector：</h3>
-
+<div id="atomic-vector" class="section level3">
+<h3>Atomic vector：</h3>
 <ul>
 <li>创建方法：c（）<br />
-c（c（c（）））嵌套后仍然会flat（链接成为一个向量）<br /></li>
+c（c（c（）））嵌套后仍然会flat（链接成为一个向量）<br />
+</li>
 <li>内含元素的type：<br />
 common types：logical，integer（用1L,2L强制设定），double（numeric），character<br />
 Rare types：complex，raw<br />
 Types and tests：is.character(), is.double(), is.integer(), is.logical(), or, more generally, is.atomic().<strong>is.numeric() 在interger和double的时候都返回true</strong><br />
-Coercion：Types from least to most flexible are: logical, integer, double, and character.2个不同type用c合并的时候会（按上述顺序）从前向后转化<br />
-<br /></li>
+Coercion：Types from least to most flexible are: logical, integer, double, and character.2个不同type用c合并的时候会（按上述顺序）从前向后转化</li>
 </ul>
-
-<h2 id="lists">lists</h2>
-
+</div>
+<div id="lists" class="section level2">
+<h2>lists</h2>
 <p>lists是一个内含元素type不同的向量，内含元素可以是一个list<br />
 - 创建方法：list（）<br />
- list(list(list(list())))会得到一个嵌套list（no flat）</p>
-
-<pre><code class="language-r">x &lt;- list(list(list(list())))
-str(x)
-</code></pre>
-
+list(list(list(list())))会得到一个嵌套list（no flat）</p>
+<pre class="r"><code>x &lt;- list(list(list(list())))
+str(x)</code></pre>
 <pre><code>## List of 1
 ##  $ :List of 1
 ##   ..$ :List of 1
-##   .. ..$ : list()
-</code></pre>
-
+##   .. ..$ : list()</code></pre>
 <p>list(list(1, 2), c(3, 4)) 内含2个item，第一个是list，第二个是c<br />
- c(list(1, 2), c(3, 4))会变成一个list，4个item，每个item一个数字</p>
-
-<pre><code class="language-r">x &lt;- list(list(1, 2), c(3, 4))
+c(list(1, 2), c(3, 4))会变成一个list，4个item，每个item一个数字</p>
+<pre class="r"><code>x &lt;- list(list(1, 2), c(3, 4))
 y &lt;- c(list(1, 2), c(3, 4))
-str(x)
-</code></pre>
-
+str(x)</code></pre>
 <pre><code>## List of 2
 ##  $ :List of 2
 ##   ..$ : num 1
 ##   ..$ : num 2
-##  $ : num [1:2] 3 4
-</code></pre>
-
+##  $ : num [1:2] 3 4</code></pre>
 <p>unlist().把不同type的item转化成同一种type。</p>
-
-<h2 id="solution-of-the-exercises">Solution of the Exercises</h2>
-
+</div>
+<div id="solution-of-the-exercises" class="section level2">
+<h2>Solution of the Exercises</h2>
 <ul>
 <li>What are the six types of atomic vector? How does a list differ from an atomic vector?</li>
 </ul>
-
 <p>interger, double, logistical, character, raw, complex.</p>
-
 <ul>
-<li>What makes is.vector() and is.numeric() fundamentally different to is.list() and
-is.character()?</li>
+<li>What makes is.vector() and is.numeric() fundamentally different to is.list() and is.character()?</li>
 </ul>
-
 <p>is.vector will return true when the object is an atomic vector or a list.</p>
-
 <p>is.list only return true when the object is a list.</p>
-
 <p>is.numeric and is character are totally different.</p>
-
 <ul>
 <li>Test your knowledge of vector coercion rules by predicting the output of the following uses of c():</li>
 </ul>
-
-<pre><code class="language-r">c(1, FALSE)
-</code></pre>
-
-<pre><code>## [1] 1 0
-</code></pre>
-
-<pre><code class="language-r">c(&quot;a&quot;, 1)
-</code></pre>
-
-<pre><code>## [1] &quot;a&quot; &quot;1&quot;
-</code></pre>
-
-<pre><code class="language-r">c(list(1), &quot;a&quot;)
-</code></pre>
-
+<pre class="r"><code>c(1, FALSE)</code></pre>
+<pre><code>## [1] 1 0</code></pre>
+<pre class="r"><code>c(&quot;a&quot;, 1)</code></pre>
+<pre><code>## [1] &quot;a&quot; &quot;1&quot;</code></pre>
+<pre class="r"><code>c(list(1), &quot;a&quot;)</code></pre>
 <pre><code>## [[1]]
 ## [1] 1
 ## 
 ## [[2]]
-## [1] &quot;a&quot;
-</code></pre>
-
-<pre><code class="language-r">c(TRUE, 1L)
-</code></pre>
-
-<pre><code>## [1] 1 1
-</code></pre>
-
+## [1] &quot;a&quot;</code></pre>
+<pre class="r"><code>c(TRUE, 1L)</code></pre>
+<pre><code>## [1] 1 1</code></pre>
 <ul>
 <li>Why do you need to use unlist() to convert a list to an atomic vector? Why doesn’t as.vector() work?</li>
 </ul>
-
 <p>list is also a vector.</p>
-
 <ul>
-<li>Why is 1 == &ldquo;1&rdquo; true? Why is -1 &lt; FALSE true? Why is &ldquo;one&rdquo; &lt; 2 false?</li>
+<li>Why is 1 == “1” true? Why is -1 &lt; FALSE true? Why is “one” &lt; 2 false?</li>
 </ul>
-
-<p>Equivalent to &ldquo;1&rdquo;==&ldquo;1&rdquo;, -1&lt;0, &ldquo;one&rdquo;&lt;&ldquo;2&rdquo;</p>
-
+<p>Equivalent to “1”==“1”, -1&lt;0, “one”&lt;“2”</p>
 <ul>
-<li>Why is the default missing value, NA, a logical vector? What’s special about logical vectors?(Hint: think about c(FALSE, NA<em>character</em>).)</li>
+<li>Why is the default missing value, NA, a logical vector? What’s special about logical vectors?(Hint: think about c(FALSE, NA_character_).)</li>
 </ul>
-
-<pre><code class="language-r">str(NA)
-</code></pre>
-
-<pre><code>##  logi NA
-</code></pre>
-
-<pre><code class="language-r">c(FALSE, NA_character_)
-</code></pre>
-
-<pre><code>## [1] &quot;FALSE&quot; NA
-</code></pre>
-
-<p>I can&rsquo;t understand well. If u know the answer please tell me. Thx~</p>
-
-<h2 id="attributes">Attributes</h2>
-
+<pre class="r"><code>str(NA)</code></pre>
+<pre><code>##  logi NA</code></pre>
+<pre class="r"><code>c(FALSE, NA_character_)</code></pre>
+<pre><code>## [1] &quot;FALSE&quot; NA</code></pre>
+<p>I can’t understand well. If u know the answer please tell me. Thx~</p>
+</div>
+<div id="attributes" class="section level2">
+<h2>Attributes</h2>
 <p>Attributes是所有object都有的，用于储存额外信息（如名字，特定说明文本等）</p>
-
-<pre><code class="language-r">y &lt;- 1:10
+<pre class="r"><code>y &lt;- 1:10
 attr(y, &quot;my_attribute&quot;) &lt;- &quot;This is a vector&quot;
-attr(y, &quot;my_attribute&quot;)
-</code></pre>
-
-<pre><code>## [1] &quot;This is a vector&quot;
-</code></pre>
-
-<pre><code class="language-r">str(attributes(y))
-</code></pre>
-
+attr(y, &quot;my_attribute&quot;)</code></pre>
+<pre><code>## [1] &quot;This is a vector&quot;</code></pre>
+<pre class="r"><code>str(attributes(y))</code></pre>
 <pre><code>## List of 1
-##  $ my_attribute: chr &quot;This is a vector&quot;
-</code></pre>
-
-<pre><code class="language-r">structure(1:10, my_attribute = &quot;This is a vector&quot;)
-</code></pre>
-
+##  $ my_attribute: chr &quot;This is a vector&quot;</code></pre>
+<pre class="r"><code>structure(1:10, my_attribute = &quot;This is a vector&quot;)</code></pre>
 <pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10
 ## attr(,&quot;my_attribute&quot;)
-## [1] &quot;This is a vector&quot;
-</code></pre>
-
-<pre><code class="language-r"># most attributes are lost when modifying a vector,unless Names,Dimensions,Class
-attributes(y[1])
-</code></pre>
-
-<pre><code>## NULL
-</code></pre>
-
-<pre><code class="language-r">attributes(sum(y))
-</code></pre>
-
-<pre><code>## NULL
-</code></pre>
-
-<h2 id="names">Names</h2>
-
-<pre><code class="language-r">c(a = 1, b = 2, c = 3)
-</code></pre>
-
+## [1] &quot;This is a vector&quot;</code></pre>
+<pre class="r"><code># most attributes are lost when modifying a vector,unless Names,Dimensions,Class
+attributes(y[1])</code></pre>
+<pre><code>## NULL</code></pre>
+<pre class="r"><code>attributes(sum(y))</code></pre>
+<pre><code>## NULL</code></pre>
+</div>
+<div id="names" class="section level2">
+<h2>Names</h2>
+<pre class="r"><code>c(a = 1, b = 2, c = 3)</code></pre>
 <pre><code>## a b c 
-## 1 2 3
-</code></pre>
-
-<pre><code class="language-r">x &lt;- 1:3; names(x) &lt;- c(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;)
-setNames(1:3, c(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;))
-</code></pre>
-
+## 1 2 3</code></pre>
+<pre class="r"><code>x &lt;- 1:3; names(x) &lt;- c(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;)
+setNames(1:3, c(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;))</code></pre>
 <pre><code>## a b c 
-## 1 2 3
-</code></pre>
-
-<pre><code class="language-r">y &lt;- c(a = 1, 2, 3); names(y)
-</code></pre>
-
-<pre><code>## [1] &quot;a&quot; &quot;&quot;  &quot;&quot;
-</code></pre>
-
-<pre><code class="language-r">z &lt;- c(1, 2, 3); names(z)
-</code></pre>
-
-<pre><code>## NULL
-</code></pre>
-
-<h2 id="factors">Factors</h2>
-
+## 1 2 3</code></pre>
+<pre class="r"><code>y &lt;- c(a = 1, 2, 3); names(y)</code></pre>
+<pre><code>## [1] &quot;a&quot; &quot;&quot;  &quot;&quot;</code></pre>
+<pre class="r"><code>z &lt;- c(1, 2, 3); names(z)</code></pre>
+<pre><code>## NULL</code></pre>
+</div>
+<div id="factors" class="section level2">
+<h2>Factors</h2>
 <p>一个factor是一个vector，但只能包含预定的值，并且用于存储分类变量。Factor是在一个integer vector的基础上加入2个特殊的attribute，class为factor，levels为预先设定的允许值。</p>
-
-<pre><code class="language-r">x &lt;- factor(c(&quot;a&quot;, &quot;b&quot;, &quot;b&quot;, &quot;a&quot;));levels(x)
-</code></pre>
-
-<pre><code>## [1] &quot;a&quot; &quot;b&quot;
-</code></pre>
-
-<pre><code class="language-r"># You can't use values that are not in the levels
-x[2] &lt;- &quot;c&quot;
-</code></pre>
-
+<pre class="r"><code>x &lt;- factor(c(&quot;a&quot;, &quot;b&quot;, &quot;b&quot;, &quot;a&quot;));levels(x)</code></pre>
+<pre><code>## [1] &quot;a&quot; &quot;b&quot;</code></pre>
+<pre class="r"><code># You can&#39;t use values that are not in the levels
+x[2] &lt;- &quot;c&quot;</code></pre>
 <pre><code>## Warning in `[&lt;-.factor`(`*tmp*`, 2, value = &quot;c&quot;): invalid factor level, NA
-## generated
-</code></pre>
-
-<pre><code class="language-r"># you can't combine factors
-c(factor(&quot;a&quot;), factor(&quot;b&quot;))
-</code></pre>
-
-<pre><code>## [1] 1 1
-</code></pre>
-
-<p>While factors look (and often behave) like character vectors, they are actually integers. Be careful
-when treating them like strings. Some string methods (like gsub() and grepl()) will coerce factors
-to strings, while others (like nchar()) will throw an error, and still others (like c()) will use the
-underlying integer values. For this reason, it’s usually best to explicitly convert factors to character
-vectors if you need string-like behaviour.</p>
-
-<h2 id="exercises">Exercises</h2>
-
+## generated</code></pre>
+<pre class="r"><code># you can&#39;t combine factors
+c(factor(&quot;a&quot;), factor(&quot;b&quot;))</code></pre>
+<pre><code>## [1] 1 1</code></pre>
+<p>While factors look (and often behave) like character vectors, they are actually integers. Be careful when treating them like strings. Some string methods (like gsub() and grepl()) will coerce factors to strings, while others (like nchar()) will throw an error, and still others (like c()) will use the underlying integer values. For this reason, it’s usually best to explicitly convert factors to character vectors if you need string-like behaviour.</p>
+</div>
+<div id="exercises" class="section level2">
+<h2>Exercises</h2>
 <ul>
 <li>An early draft used this code to illustrate structure():</li>
 </ul>
-
-<pre><code class="language-r">structure(1:5, comment = &quot;my attribute&quot;)
-</code></pre>
-
-<pre><code>## [1] 1 2 3 4 5
-</code></pre>
-
+<pre class="r"><code>structure(1:5, comment = &quot;my attribute&quot;)</code></pre>
+<pre><code>## [1] 1 2 3 4 5</code></pre>
 <p>But when you print that object you don’t see the comment attribute. Why? Is the attribute missing, or is there something else special about it? (Hint: try using help.)</p>
-
-<pre><code class="language-r">str(structure(1:5, comment = &quot;my attribute&quot;))
-</code></pre>
-
+<pre class="r"><code>str(structure(1:5, comment = &quot;my attribute&quot;))</code></pre>
 <pre><code>##  atomic [1:5] 1 2 3 4 5
-##  - attr(*, &quot;comment&quot;)= chr &quot;my attribute&quot;
-</code></pre>
-
+##  - attr(*, &quot;comment&quot;)= chr &quot;my attribute&quot;</code></pre>
 <p>It is a special case of not printing.</p>
-
 <ul>
 <li>What happens to a factor when you modify its levels?</li>
 </ul>
-
-<pre><code class="language-r">f1 &lt;- factor(letters)
-f1
-</code></pre>
-
+<pre class="r"><code>f1 &lt;- factor(letters)
+f1</code></pre>
 <pre><code>##  [1] a b c d e f g h i j k l m n o p q r s t u v w x y z
-## Levels: a b c d e f g h i j k l m n o p q r s t u v w x y z
-</code></pre>
-
-<pre><code class="language-r">levels(f1) &lt;- rev(levels(f1))
-f1
-</code></pre>
-
+## Levels: a b c d e f g h i j k l m n o p q r s t u v w x y z</code></pre>
+<pre class="r"><code>levels(f1) &lt;- rev(levels(f1))
+f1</code></pre>
 <pre><code>##  [1] z y x w v u t s r q p o n m l k j i h g f e d c b a
-## Levels: z y x w v u t s r q p o n m l k j i h g f e d c b a
-</code></pre>
-
+## Levels: z y x w v u t s r q p o n m l k j i h g f e d c b a</code></pre>
 <p>vector和level都倒排</p>
-
 <ul>
 <li>What does this code do? How do f2 and f3 differ from f1?</li>
 </ul>
-
-<pre><code class="language-r">f2 &lt;- rev(factor(letters))
-f2
-</code></pre>
-
+<pre class="r"><code>f2 &lt;- rev(factor(letters))
+f2</code></pre>
 <pre><code>##  [1] z y x w v u t s r q p o n m l k j i h g f e d c b a
-## Levels: a b c d e f g h i j k l m n o p q r s t u v w x y z
-</code></pre>
-
-<pre><code class="language-r">f3 &lt;- factor(letters, levels = rev(letters))
-f3
-</code></pre>
-
+## Levels: a b c d e f g h i j k l m n o p q r s t u v w x y z</code></pre>
+<pre class="r"><code>f3 &lt;- factor(letters, levels = rev(letters))
+f3</code></pre>
 <pre><code>##  [1] a b c d e f g h i j k l m n o p q r s t u v w x y z
-## Levels: z y x w v u t s r q p o n m l k j i h g f e d c b a
-</code></pre>
-
+## Levels: z y x w v u t s r q p o n m l k j i h g f e d c b a</code></pre>
 <p>f2只倒排vector，f3只倒排level。</p>
-
-<h2 id="matrices-and-arrays">Matrices and arrays</h2>
-
+</div>
+<div id="matrices-and-arrays" class="section level2">
+<h2>Matrices and arrays</h2>
 <p>Adding a <strong>dim()</strong> attribute to an atomic vector allows it to behave like a multi-dimensional array. A special case of the array is the <strong>matrix</strong>, which has two dimensions.</p>
-
-<h2 id="exercises-1">Exercises</h2>
-
+</div>
+<div id="exercises-1" class="section level2">
+<h2>Exercises</h2>
 <ul>
 <li>What does dim() return when applied to a vector?</li>
 </ul>
-
-<pre><code class="language-r">x &lt;- 1:5;dim(x);class(x)
-</code></pre>
-
-<pre><code>## NULL
-</code></pre>
-
-<pre><code>## [1] &quot;integer&quot;
-</code></pre>
-
-<pre><code class="language-r">dim(x)=c(1,5);class(x)
-</code></pre>
-
-<pre><code>## [1] &quot;matrix&quot;
-</code></pre>
-
+<pre class="r"><code>x &lt;- 1:5;dim(x);class(x)</code></pre>
+<pre><code>## NULL</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<pre class="r"><code>dim(x)=c(1,5);class(x)</code></pre>
+<pre><code>## [1] &quot;matrix&quot;</code></pre>
 <ul>
 <li>If is.matrix(x) is TRUE, what will is.array(x) return?</li>
 </ul>
-
 <p>True.</p>
-
 <ul>
 <li>How would you describe the following three objects? What makes them different to 1:5?</li>
 </ul>
-
-<pre><code class="language-r">x1 &lt;- array(1:5, c(1, 1, 5));x1
-</code></pre>
-
+<pre class="r"><code>x1 &lt;- array(1:5, c(1, 1, 5));x1</code></pre>
 <pre><code>## , , 1
 ## 
 ##      [,1]
@@ -445,21 +289,13 @@ f3
 ## , , 5
 ## 
 ##      [,1]
-## [1,]    5
-</code></pre>
-
-<pre><code class="language-r">x2 &lt;- array(1:5, c(1, 5, 1));x2
-</code></pre>
-
+## [1,]    5</code></pre>
+<pre class="r"><code>x2 &lt;- array(1:5, c(1, 5, 1));x2</code></pre>
 <pre><code>## , , 1
 ## 
 ##      [,1] [,2] [,3] [,4] [,5]
-## [1,]    1    2    3    4    5
-</code></pre>
-
-<pre><code class="language-r">x3 &lt;- array(1:5, c(5, 1, 1));x3
-</code></pre>
-
+## [1,]    1    2    3    4    5</code></pre>
+<pre class="r"><code>x3 &lt;- array(1:5, c(5, 1, 1));x3</code></pre>
 <pre><code>## , , 1
 ## 
 ##      [,1]
@@ -467,174 +303,112 @@ f3
 ## [2,]    2
 ## [3,]    3
 ## [4,]    4
-## [5,]    5
-</code></pre>
-
-<h2 id="data-frames">Data frames</h2>
-
+## [5,]    5</code></pre>
+</div>
+<div id="data-frames" class="section level2">
+<h2>Data frames</h2>
 <p>a data frame is a list of equal-length vectors.data frame是一个list</p>
-
-<pre><code class="language-r">df &lt;- data.frame(x = 1:3, y = c(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;))
-typeof(df)
-</code></pre>
-
-<pre><code>## [1] &quot;list&quot;
-</code></pre>
-
-<pre><code class="language-r">class(df)
-</code></pre>
-
-<pre><code>## [1] &quot;data.frame&quot;
-</code></pre>
-
-<pre><code class="language-r">is.data.frame(df)
-</code></pre>
-
-<pre><code>## [1] TRUE
-</code></pre>
-
+<pre class="r"><code>df &lt;- data.frame(x = 1:3, y = c(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;))
+typeof(df)</code></pre>
+<pre><code>## [1] &quot;list&quot;</code></pre>
+<pre class="r"><code>class(df)</code></pre>
+<pre><code>## [1] &quot;data.frame&quot;</code></pre>
+<pre class="r"><code>is.data.frame(df)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
 <ul>
 <li>a data frame has names(), colnames(),and rownames(), although names() and colnames() are the same thing. The length() of a data frame is the length of the underlying list and so is the same as ncol(); nrow() gives the number of rows.</li>
 </ul>
-
 <p>lenghth是列数，nrow是行数</p>
-
 <p>Beware data.frame()’s default behaviour which turns strings into factors. Use stringAsFactors =FALSE to suppress this behaviour 默认会把字符串转因子。</p>
-
 <ul>
 <li>You can combine data frames using cbind() and rbind():</li>
 </ul>
-
-<pre><code class="language-r">cbind(df, data.frame(z = 3:1))
-</code></pre>
-
+<pre class="r"><code>cbind(df, data.frame(z = 3:1))</code></pre>
 <pre><code>##   x y z
 ## 1 1 a 3
 ## 2 2 b 2
-## 3 3 c 1
-</code></pre>
-
-<pre><code class="language-r">rbind(df, data.frame(x = 10, y = &quot;z&quot;))
-</code></pre>
-
+## 3 3 c 1</code></pre>
+<pre class="r"><code>rbind(df, data.frame(x = 10, y = &quot;z&quot;))</code></pre>
 <pre><code>##    x y
 ## 1  1 a
 ## 2  2 b
 ## 3  3 c
-## 4 10 z
-</code></pre>
-
+## 4 10 z</code></pre>
 <p>按列（左右连接）bind的时候，行要一样多，行名会被忽略。按行（上下连接）bind的时候，列数和列名都要一致。Use plyr::rbind.fill() to combine data frames that don’t have the same columns.</p>
-
 <ul>
 <li>Since a data frame is a list of vectors, it is possible for a data frame to have a column that is a list:</li>
 </ul>
-
-<pre><code class="language-r">df &lt;- data.frame(x = 1:3)
+<pre class="r"><code>df &lt;- data.frame(x = 1:3)
 df$y &lt;- list(1:2, 1:3, 1:4)
-df
-</code></pre>
-
+df</code></pre>
 <pre><code>##   x          y
 ## 1 1       1, 2
 ## 2 2    1, 2, 3
-## 3 3 1, 2, 3, 4
-</code></pre>
-
+## 3 3 1, 2, 3, 4</code></pre>
 <p>list的item数量要和原有的向量长度一致</p>
-
 <p>However, when a list is given to data.frame(), it tries to put each item of the list into its own</p>
-
-<pre><code class="language-r">#data.frame(x = 1:3, y = list(1:2, 1:3, 1:4))
+<pre class="r"><code>#data.frame(x = 1:3, y = list(1:2, 1:3, 1:4))
 #&gt; Error in data.frame(1:2, 1:3, 1:4, check.names = FALSE, stringsAsFactors = TRUE):
-#arguments imply differing number of rows: 2, 3, 4
-</code></pre>
-
+#arguments imply differing number of rows: 2, 3, 4</code></pre>
 <p>data.frame()不能混合atomic vector和list</p>
-
 <p>A workaround is to use I(), which causes data.frame() to treat the list as one unit:</p>
-
-<pre><code class="language-r">dfl &lt;- data.frame(x = 1:3, y = I(list(1:2, 1:3, 1:4)))
-dfl
-</code></pre>
-
+<pre class="r"><code>dfl &lt;- data.frame(x = 1:3, y = I(list(1:2, 1:3, 1:4)))
+dfl</code></pre>
 <pre><code>##   x          y
 ## 1 1       1, 2
 ## 2 2    1, 2, 3
-## 3 3 1, 2, 3, 4
-</code></pre>
-
-<pre><code class="language-r">str(dfl)
-</code></pre>
-
-<pre><code>## 'data.frame':    3 obs. of  2 variables:
+## 3 3 1, 2, 3, 4</code></pre>
+<pre class="r"><code>str(dfl)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    3 obs. of  2 variables:
 ##  $ x: int  1 2 3
 ##  $ y:List of 3
 ##   ..$ : int  1 2
 ##   ..$ : int  1 2 3
 ##   ..$ : int  1 2 3 4
-##   ..- attr(*, &quot;class&quot;)= chr &quot;AsIs&quot;
-</code></pre>
-
-<pre><code class="language-r">dfl[2, &quot;y&quot;]
-</code></pre>
-
+##   ..- attr(*, &quot;class&quot;)= chr &quot;AsIs&quot;</code></pre>
+<pre class="r"><code>dfl[2, &quot;y&quot;]</code></pre>
 <pre><code>## [[1]]
-## [1] 1 2 3
-</code></pre>
-
-<h2 id="exercises-2">Exercises</h2>
-
+## [1] 1 2 3</code></pre>
+</div>
+<div id="exercises-2" class="section level2">
+<h2>Exercises</h2>
 <ul>
 <li>What attributes does a data frame possess?</li>
 </ul>
-
 <p>names,row.names,class</p>
-
 <ul>
 <li>What does as.matrix() do when applied to a data frame with columns of different types?</li>
 </ul>
-
 <p>Coercion</p>
-
 <ul>
 <li>Can you have a data frame with 0 rows? What about 0 columns?</li>
 </ul>
-
 <p>Yes,Yes.</p>
-
-<h2 id="quiz">Quiz</h2>
-
+</div>
+<div id="quiz" class="section level2">
+<h2>Quiz</h2>
 <ul>
 <li><p>What are the three properties of a vector, other than its contents?</p></li>
-
 <li><p>What are the four common types of atomic vectors? What are the two rare types?</p></li>
-
 <li><p>What are attributes? How do you get them and set them?</p></li>
-
 <li><p>How is a list different from an atomic vector? How is a matrix different from a data frame?</p></li>
-
 <li><p>Can you have a list that is a matrix? Can a data frame have a column that is a matrix?</p></li>
 </ul>
-
 <p>Answers</p>
-
 <ul>
 <li><p>The three properties of a vector are type, length, and attributes.</p></li>
-
 <li><p>The four common types of atomic vector are logical, integer, double (sometimes called numeric), and character. The two rarer types are complex and raw.</p></li>
-
-<li><p>Attributes allow you to associate arbitrary additional metadata to any object. You can get and set individual attributes with attr(x, &ldquo;y&rdquo;) and attr(x, &ldquo;y&rdquo;) &lt;- value; or get and set all attributes at once with attributes().</p></li>
-
+<li><p>Attributes allow you to associate arbitrary additional metadata to any object. You can get and set individual attributes with attr(x, “y”) and attr(x, “y”) &lt;- value; or get and set all attributes at once with attributes().</p></li>
 <li><p>The elements of a list can be any type (even a list); the elements of an atomic vector are all of the same type. Similarly, every element of a matrix must be the same type; in a data frame, the different columns can have different types.</p></li>
-
 <li><p>You can make “list-array” by assuming dimensions to a list. You can make a matrix a column of a data frame with df$x &lt;- matrix(), or using I() when creating a new data frame data.frame(x = I(matrix())).</p></li>
 </ul>
+</div>
+</div>
+
     </div>
   </article>
 
   
-
 
 </main>
 
@@ -650,18 +424,6 @@ dfl
       </footer>
 
     </div>
-    
-
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/r.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/yaml.min.js"></script>
-<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
-
-
-
-    
 
     
   </body>

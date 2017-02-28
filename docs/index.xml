@@ -1,192 +1,203 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Lithium Theme</title>
+    <title>Beauty of Data</title>
     <link>/index.xml</link>
-    <description>Recent content on Lithium Theme</description>
+    <description>Recent content on Beauty of Data</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 10 Jul 2016 00:00:00 +0000</lastBuildDate>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 28 Feb 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>缺失值处理</title>
-      <link>/2016/07/10/%E7%BC%BA%E5%A4%B1%E5%80%BC%E5%A4%84%E7%90%86/</link>
+      <title>THREE THINGS I WISH I KNEW EARLIER ABOUT MACHINE LEARNING</title>
+      <link>/2017/02/28/three-things-i-wish-i-knew-earlier-about-machine-learning/</link>
+      <pubDate>Tue, 28 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/02/28/three-things-i-wish-i-knew-earlier-about-machine-learning/</guid>
+      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
+&lt;!-- /BLOGDOWN-HEAD --&gt;
+
+&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
+&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
+&lt;p&gt;我已经在学术界和工业界进行了许多年的机器学习建模工作，在看了一系列讨论“大数据”实用性问题的优秀视频 &lt;a href=&#34;https://www.safaribooksonline.com/library/view/scalable-machine-learning/9781491939437/video233428.html&#34;&gt;Scalable ML&lt;/a&gt; 后，我开始思考总结一些在学习机器学习时，我希望能够尽早明白的事情。视频来源于 Mikio Braun，介绍了 Scala 和 Spark 相关的知识。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;我希望在学习机器学习时能够尽早明白的事情有三项：&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;将模型应用到产品中并不是一件简单的小事；&lt;/li&gt;
+&lt;li&gt;在课本中我们很难学习到真正的特征选择和特征提取技巧；&lt;/li&gt;
+&lt;li&gt;模型评估阶段非常重要。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;下面让我一个一个地介绍它们。&lt;/p&gt;
+&lt;div class=&#34;section level2&#34;&gt;
+&lt;h2&gt;1. 将模型应用到产品中并不是一件简单的小事&lt;/h2&gt;
+&lt;p&gt;我在 &lt;a href=&#34;http://pyvideo.org/pycon-italia-2015/how-to-get-data-science-models-into-production-on.html&#34;&gt;Data-Product&lt;/a&gt; 上有一场介绍如何将常微分方程应用到产品中的演讲。之后我花了好一段时间才意识到，自己一个人来处理包括模型衰退、产品中模型评价、开发与运维沟通等事务是多么的困难。Yhat 的 &lt;a href=&#34;http://www.yhathq.com/&#34;&gt;ScienceOps&lt;/a&gt; 是针对这个问题的一个解决方案。一开始我并没有意识到它有多棒，现在我发现我很难在市场中找到该产品的直接竞争者，我真的觉得他们正在解决这个非常重要的问题。渐渐地，我意识到我没有聪明到可以处理运维成员负责的事务——所以我很乐意将这项工作外包。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2. 在课本中我们很难学习到真正的特征选择和特征提取技巧&lt;/h2&gt;
+&lt;p&gt;特征选择和提取方法和技巧常常无法从课本中学习。这些技巧只能从像 Kaggle 竞赛或现实世界中的项目中学习，甚至有时候需要实际应用这些技巧和方法才能学会它们。而这些工作在整个数据科学项目流程中占据了相当一部分比重。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3. 模型评估阶段非常重要&lt;/h2&gt;
+&lt;p&gt;除非你已经将模型应用到测试集数据上了，否则你都不能说已经进入到预测分析阶段。像交叉验证、评估指标等评估技巧都是非常宝贵的，因为它们只需将你的数据分离成测试集和训练集。但是实际生活通常并不会将已经定义好测试集、训练集的数据给你，所以将真实世界中的数据划分为测试数据和训练数据，是一项充满创造性的工作，其中可能包含许多情感因素。在 &lt;a href=&#34;http://blog.dato.com/how-to-evaluate-machine-learning-models-the-pitfalls-of-ab-testing&#34;&gt;Dato&lt;/a&gt; 上有许多讨论模型评估的优秀文章。&lt;/p&gt;
+&lt;p&gt;我认为 &lt;a href=&#34;http://blog.mikiobraun.de/2015/03/three-things-about-data-science.html&#34;&gt;Mikio Braun&lt;/a&gt; 对训练集和测试集的解释值得一读。我也很喜欢他画的图并将其包含在文中，方便不熟悉训练集和测试集概念的读者理解。&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;http://blog.mikiobraun.de/images/3t-evaluation.png&#34; /&gt;
+
+&lt;/div&gt;
+&lt;p&gt;来源：Mikio Braun 2015&lt;/p&gt;
+&lt;p&gt;我们在论文、会议甚至在讨论我们解决问题时所用的方法的时候，经常忽略了模型评价。“我们在其中使用了 SVM”这句话并没有告诉我任何信息，这没有告诉我你的数据来源，你选择的特征，你的模型评估方法，你如何将其应用到产品中，以及你在其中如何使用交叉验证或模型查错。我认为我们需要更多关于机器学习中这些“肮脏”的方面问题的讨论。&lt;/p&gt;
+&lt;p&gt;我的朋友 Ian 在 &lt;a href=&#34;https://github.com/ianozsvald/data_science_delivered&#34;&gt;Data Science Delivered&lt;/a&gt; 上有一个很好的笔记，适合需要为真实情况建立机器学习模型的任何层次的人员阅读。同时也适合希望雇佣数据科学家的招聘人员或者与数据科学团队打交道的经理阅读——如果你正在找人询问“你是如何处理这些肮脏的数据的”。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level2&#34;&gt;
+&lt;h2&gt;作者简介：&lt;/h2&gt;
+&lt;p&gt;Peadar Coyle，数据科学家，开源软件贡献者，演讲家与作家。先后就职于 Amazon、Vodafone、JOB TODAY、Channel 4、Elevate Direct 等，在数据驱动解决方案设计开发中具有丰富的经验。&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Deal with missing value</title>
+      <link>/2016/07/10/deal-with-missing-value/</link>
       <pubDate>Sun, 10 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>/2016/07/10/%E7%BC%BA%E5%A4%B1%E5%80%BC%E5%A4%84%E7%90%86/</guid>
-      <description>
-
-&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
-
+      <guid>/2016/07/10/deal-with-missing-value/</guid>
+      <description>&lt;div class=&#34;section level2&#34;&gt;
+&lt;h2&gt;简介&lt;/h2&gt;
 &lt;p&gt;缺失值是一个实际数据处理中常见的问题。其缺失机制大致可以分为完全随机缺失（MCAR），非随机缺失（MNAR）&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;缺失的例子说明：假设一个数据集有3个变量 $X_1$ , $X_2$ , $Y$ ,假设 $X_1$ , $X_2$ 是完全变量, $Y$ 存在缺失值，那么&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;当 $Y$ 以0.5概率缺失，为MCAR&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;当 $X_1&amp;lt;0$ 或者当 $Y&amp;lt;0$ , $Y$ 发生缺失，为MNAR&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;对于完全随机缺失，直接剔除一般不会带来偏误，而对于非完全随机缺失，由于缺失值出现的位置可能和其他变量有关联，带来的后果则相对复杂得多。&lt;/p&gt;
-
 &lt;!-- more --&gt;
-
-&lt;h3 id=&#34;常见处理方法&#34;&gt;常见处理方法&lt;/h3&gt;
-
-&lt;h4 id=&#34;删除法&#34;&gt;删除法&lt;/h4&gt;
-
-&lt;ol&gt;
+&lt;ul&gt;
+&lt;li&gt;缺失的例子说明：假设一个数据集有3个变量 &lt;span class=&#34;math inline&#34;&gt;\(X_1\)&lt;/span&gt; , &lt;span class=&#34;math inline&#34;&gt;\(X_2\)&lt;/span&gt; , &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; ,假设 &lt;span class=&#34;math inline&#34;&gt;\(X_1\)&lt;/span&gt; , &lt;span class=&#34;math inline&#34;&gt;\(X_2\)&lt;/span&gt; 是完全变量, &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; 存在缺失值，那么&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;当 &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; 以0.5概率缺失，为MCAR&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;当 &lt;span class=&#34;math inline&#34;&gt;\(X_1&amp;lt;0\)&lt;/span&gt; 或者当 &lt;span class=&#34;math inline&#34;&gt;\(Y&amp;lt;0\)&lt;/span&gt; , &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; 发生缺失，为MNAR&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;对于完全随机缺失，直接剔除一般不会带来偏误，而对于非完全随机缺失，由于缺失值出现的位置可能和其他变量有关联，带来的后果则相对复杂得多。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;常见处理方法&lt;/h3&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;删除法&lt;/h4&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;&lt;p&gt;直接删除有缺失值的样本&lt;/p&gt;&lt;/li&gt;
-
 &lt;li&gt;&lt;p&gt;删除存在大面积缺失值的变量。或完全变量分析：如果研究的问题只涉及到全部变量中的一部分变量，这部分变量是完整的，那么可以只分析这几个完整变量之间的关系&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;h4 id=&#34;填补法&#34;&gt;填补法&lt;/h4&gt;
-
+&lt;/div&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;填补法&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;单变量填补&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;ol&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;&lt;p&gt;简单随机填补：对于每一个缺失值，从已有的该变量数据中随机抽样作为填补值，填补进缺失位置。仅仅考虑到了缺失变量本身，而并没有考虑到相关变量的信息。因此，信息量的利用少。&lt;/p&gt;&lt;/li&gt;
-
 &lt;li&gt;&lt;p&gt;均值/中位数/分位数填补：用存在缺失值的变量的已有值的均值/中位数/分位数，作为填补值。这种方法显然会导致方差偏小。&lt;/p&gt;&lt;/li&gt;
-
 &lt;li&gt;&lt;p&gt;回归填补：将缺失变量作为因变量，相关变量（其他变量）作为自变量，进行回归拟合，用预测值作为填补值。用于作为自变量的变量最好是具有完全数据（无缺失）。&lt;/p&gt;&lt;/li&gt;
-
 &lt;li&gt;&lt;p&gt;热平台和冷平台：热平台法又称匹配插补法，思路是在完全数据样本中，找到一个和具有缺失值的样本相似的完全数据样本，用完全数据样本值作为填充值，其过程有点类似于K阶近邻的思想。冷平台法又称条件均值插补法，思路是先将总体分层（聚类），采用样本所在层（类）的完全数据的均值来替代缺失值。&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;ul&gt;
 &lt;li&gt;多变量填补&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;回归插补法：对缺失变量和完全数据变量拟合多元回归模型来预测缺失值。是多重填补法的一种应用。多重填补法（Multiple Imputation Missing Data）的具体技术方法众多且相对复杂，限于篇幅此处不一一展开。&lt;/p&gt;
-
-&lt;h2 id=&#34;基于mice包的缺失值填补方法&#34;&gt;基于mice包的缺失值填补方法&lt;/h2&gt;
-
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mice&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;基于mice包的缺失值填补方法&lt;/h2&gt;
 &lt;p&gt;mice即是基于多重填补法构造的。基本思想是对于一个具有缺失值的变量，用其他变量的数据对这个变量进行拟合，再用拟合的预测值对这个变量的缺失值进行填补。&lt;/p&gt;
-
-&lt;h3 id=&#34;数据准备-可跳过&#34;&gt;数据准备（可跳过）&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;set.seed(2016)
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;数据准备（可跳过）&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;set.seed(2016)
 data &amp;lt;- airquality
 data[sample(nrow(data),7),3] &amp;lt;- NA
 data[sample(nrow(data),7),4] &amp;lt;- NA
-data &amp;lt;- data[-c(5,6)]
-&lt;/code&gt;&lt;/pre&gt;
-
+data &amp;lt;- data[-c(5,6)]&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;采用R自带的airquality数据，其第一和第二列数据已经有很多缺失值，现在我们再人为地在第三个第四列中加入随机的7个缺失值。由于最后两列是月份和日期，不适合作为自变量，所以在缺失值填充中先剔除掉。&lt;/p&gt;
-
-&lt;h3 id=&#34;一个简单可用的版本&#34;&gt;一个简单可用的版本&lt;/h3&gt;
-
+&lt;/div&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;一个简单可用的版本&lt;/h3&gt;
 &lt;p&gt;以下代码起到一个初始化的作用，使用时只需要改data为你自己需要填补缺失值的数据集名称&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(mice)
-init = mice(data, maxit=0)
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(mice)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 载入需要的程辑包：methods&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 载入需要的程辑包：Rcpp&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## mice 2.25 2015-11-09&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;init = mice(data, maxit=0)
 meth = init$method
-predM = init$predictorMatrix
-&lt;/code&gt;&lt;/pre&gt;
-
+predM = init$predictorMatrix&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;如果不想要使全部变量都参与拟合，比如排除掉Ozone变量，加入以下代码：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;predM[, c(&amp;quot;Ozone&amp;quot;)]=0
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;predM[, c(&amp;quot;Ozone&amp;quot;)]=0&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;当然，即使你排除了拟合变量，并不意味着简单的将其排除，他只是不作为拟合变量，但仍然会作为被拟合变量，进行缺失值填充。&lt;/p&gt;
-
 &lt;p&gt;如果你想要跳过某个变量,如Temp，不对其填补，加入以下代码：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;meth[c(&amp;quot;Temp&amp;quot;)]=&amp;quot;&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;meth[c(&amp;quot;Temp&amp;quot;)]=&amp;quot;&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;在这种情况下，虽然这个变量不会被作为被拟合变量进行填充，但仍然会作为拟合变量用于拟合其他变量的缺失值。&lt;/p&gt;
-
 &lt;p&gt;对于每个变量的拟合，可以指定所用的拟合方法：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;meth[c(&amp;quot;Ozone&amp;quot;)]=&amp;quot;norm&amp;quot;
-meth[c(&amp;quot;Solar.R&amp;quot;)]=&amp;quot;logreg&amp;quot;
-meth[c(&amp;quot;Wind&amp;quot;)]=&amp;quot;polyreg&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;meth[c(&amp;quot;Ozone&amp;quot;)]=&amp;quot;norm&amp;quot;
+meth[c(&amp;quot;Solar.R&amp;quot;)]=&amp;quot;norm&amp;quot;
+meth[c(&amp;quot;Wind&amp;quot;)]=&amp;quot;norm&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;=后面的双引号内的即为方法的名字，=前面的双引号中的为所需指定的变量。norm代表贝叶斯线性回归，logreg代表logit回归拟合，polyreg代表多项式拟合。&lt;/p&gt;
-
 &lt;p&gt;设定完成后执行填充：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;imputed = mice(data, method=meth, predictorMatrix=predM, m=5)
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;imputed = mice(data, method=meth, predictorMatrix=predM, m=5)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## 
 ##  iter imp variable
-##   1   1  Ozone  Solar.R  Wind  Temp
-##   1   2  Ozone  Solar.R  Wind  Temp
-##   1   3  Ozone  Solar.R  Wind  Temp
-##   1   4  Ozone  Solar.R  Wind  Temp
-##   1   5  Ozone  Solar.R  Wind  Temp
-...
-&lt;/code&gt;&lt;/pre&gt;
-
+##   1   1  Ozone  Solar.R  Wind
+##   1   2  Ozone  Solar.R  Wind
+##   1   3  Ozone  Solar.R  Wind
+##   1   4  Ozone  Solar.R  Wind
+##   1   5  Ozone  Solar.R  Wind
+##   2   1  Ozone  Solar.R  Wind
+##   2   2  Ozone  Solar.R  Wind
+##   2   3  Ozone  Solar.R  Wind
+##   2   4  Ozone  Solar.R  Wind
+##   2   5  Ozone  Solar.R  Wind
+##   3   1  Ozone  Solar.R  Wind
+##   3   2  Ozone  Solar.R  Wind
+##   3   3  Ozone  Solar.R  Wind
+##   3   4  Ozone  Solar.R  Wind
+##   3   5  Ozone  Solar.R  Wind
+##   4   1  Ozone  Solar.R  Wind
+##   4   2  Ozone  Solar.R  Wind
+##   4   3  Ozone  Solar.R  Wind
+##   4   4  Ozone  Solar.R  Wind
+##   4   5  Ozone  Solar.R  Wind
+##   5   1  Ozone  Solar.R  Wind
+##   5   2  Ozone  Solar.R  Wind
+##   5   3  Ozone  Solar.R  Wind
+##   5   4  Ozone  Solar.R  Wind
+##   5   5  Ozone  Solar.R  Wind&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;这里我们选择让所有变量都进入拟合，每个变量的方法用默认方法（即不运行前面的设定代码），注意变量拟合时采用方法需要根据不同变量的情况选择，否则可能导致效果不佳或者算法无法计算。这需要事先对数据情况有一定了解。另外作为一个例子，本例仅仅作为代码演示，并不代表正确的参数选择方法。&lt;/p&gt;
-
 &lt;p&gt;输出填充结果到imputed：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;imputed &amp;lt;- complete(imputed)
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;imputed &amp;lt;- complete(imputed)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;检查是否存在缺失值&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;sapply(imputed, function(x) sum(is.na(x)))
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sapply(imputed, function(x) sum(is.na(x)))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##   Ozone Solar.R    Wind    Temp 
-##       0       0       0       0
-&lt;/code&gt;&lt;/pre&gt;
-
+##       0       0       0       7&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;到这里就已经可以解决大部分缺失值问题了，如果想继续深入了解mice包的用法，请看下一节。&lt;/p&gt;
-
-&lt;h3 id=&#34;进阶版本&#34;&gt;进阶版本&lt;/h3&gt;
-
+&lt;/div&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;进阶版本&lt;/h3&gt;
 &lt;p&gt;对分类变量的填充效果一般不是非常好，不建议对分类变量（categorical variables ）做填充，本例中只对连续变量进行填充。&lt;/p&gt;
-
 &lt;p&gt;假设数据是MCAR的，一般数据量的5%的样本存在缺失值是相对安全的比例。&lt;/p&gt;
-
-&lt;h4 id=&#34;计算数据的缺失率&#34;&gt;计算数据的缺失率&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;miss &amp;lt;- function(x){sum(is.na(x))/length(x)*100}
-apply(data,2,miss)
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;计算数据的缺失率&lt;/h4&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;miss &amp;lt;- function(x){sum(is.na(x))/length(x)*100}
+apply(data,2,miss)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##     Ozone   Solar.R      Wind      Temp 
-## 24.183007  4.575163  4.575163  4.575163
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;apply(data,1,miss)
-&lt;/code&gt;&lt;/pre&gt;
-
+## 24.183007  4.575163  4.575163  4.575163&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;apply(data,1,miss)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##   [1] 25  0  0  0 50 25  0  0 25 25 25  0  0  0  0  0  0 25  0  0 25 25  0
 ##  [24]  0 25 25 50 25  0  0  0 25 50 25 25 25 25  0 25  0 25 25 25  0 25 25
 ##  [47]  0  0  0  0  0 25 25 25 25 25 25 25 50 25 25  0  0  0 25  0  0  0  0
 ##  [70]  0  0 50  0  0 25  0  0  0  0  0  0  0 25 25  0  0  0  0  0  0 25  0
 ##  [93]  0  0  0 25 25 25  0  0  0 25 25  0  0  0 25  0  0  0  0  0  0  0 25
 ## [116]  0  0  0 25  0  0  0  0  0  0  0  0 25 25  0  0  0  0  0  0  0 25  0
-## [139]  0  0  0  0  0  0  0  0  0  0  0 25  0  0  0
-&lt;/code&gt;&lt;/pre&gt;
-
+## [139]  0  0  0  0  0  0  0  0  0  0  0 25  0  0  0&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;从变量角度看，可以看到Qzone的缺失率高达25%，因此我们可能需要剔除这个变量。&lt;/p&gt;
-
 &lt;p&gt;对于样本，由于只有4个变量，缺失一个就有高达25%的缺失率，权衡一下样本量，我们可以选择剔除缺失高达50%和以上的样本。&lt;/p&gt;
-
-&lt;h4 id=&#34;使用mice判断缺失情况&#34;&gt;使用mice判断缺失情况&lt;/h4&gt;
-
+&lt;/div&gt;
+&lt;div id=&#34;mice&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;使用mice判断缺失情况&lt;/h4&gt;
 &lt;p&gt;对于上述缺失率等缺失情况的计算，在mice包中还有更简便的函数：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;md.pattern(data)
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;md.pattern(data)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##     Solar.R Wind Temp Ozone   
 ## 100       1    1    1     1  0
 ##  32       1    1    1     0  1
@@ -196,41 +207,288 @@ apply(data,2,miss)
 ##   2       0    1    1     0  2
 ##   1       1    0    1     0  2
 ##   2       1    1    0     0  2
-##           7    7    7    37 58
-&lt;/code&gt;&lt;/pre&gt;
-
+##           7    7    7    37 58&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;最左边一列是样本数，右边的0-1矩阵的1代表列对应的变量没有缺失，0代表有缺失。最右边一列是对应模式累计缺失值个数，最下面一列是变量累积存在的缺失模式个数。&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;假如&lt;/strong&gt; 第三行的数据410111，表示有4个样本满足这行的缺失模式，1011表示这行的缺失模式是缺失了Solar.R变量，最右边的1表示这种缺失模式缺失了1个变量数据。&lt;/p&gt;
-
 &lt;p&gt;可以用VIM包获得缺失值的可视化表示&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(VIM)
-aggr_plot &amp;lt;- aggr(data, col=c(&#39;navyblue&#39;,&#39;red&#39;), numbers=TRUE, labels=names(data), cex.axis=.7, gap=3, ylab=c(&amp;quot;Histogram  of missing data&amp;quot;,&amp;quot;Pattern&amp;quot;))
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;缺失值处理/unnamed-chunk-8-1.png&#34; alt=&#34;&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;marginplot(data[c(1,2)])
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;缺失值处理/unnamed-chunk-8-2.png&#34; alt=&#34;&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
-
-&lt;p&gt;marginplot(data[c(1,2)])一次只表示2个变量的缺失情况，这里表示了第一和第二列变量。
-左边的红色箱线图表示有Ozone缺失的样本的Solar.R的分布，蓝色的箱线图表示的是剩下的数据点的分布。下方的2个箱线图的含义类似。&lt;/p&gt;
-
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(VIM)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 载入需要的程辑包：colorspace&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 载入需要的程辑包：grid&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 载入需要的程辑包：data.table&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## VIM is ready to use. 
+##  Since version 4.0.0 the GUI is in its own package VIMGUI.
+## 
+##           Please use the package to use the new (and old) GUI.&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Suggestions and bug-reports can be submitted at: https://github.com/alexkowa/VIM/issues&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## 载入程辑包：&amp;#39;VIM&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## The following object is masked from &amp;#39;package:datasets&amp;#39;:
+## 
+##     sleep&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;aggr_plot &amp;lt;- aggr(data, col=c(&amp;#39;navyblue&amp;#39;,&amp;#39;red&amp;#39;), numbers=TRUE, labels=names(data), cex.axis=.7, gap=3, ylab=c(&amp;quot;Histogram  of missing data&amp;quot;,&amp;quot;Pattern&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;./post/miss-value_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;marginplot(data[c(1,2)])&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;./post/miss-value_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;marginplot(data[c(1,2)])一次只表示2个变量的缺失情况，这里表示了第一和第二列变量。 左边的红色箱线图表示有Ozone缺失的样本的Solar.R的分布，蓝色的箱线图表示的是剩下的数据点的分布。下方的2个箱线图的含义类似。&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;在MCAR的假设下，蓝色和红色的箱线图应该非常接近。&lt;/em&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;填充缺失值&#34;&gt;填充缺失值&lt;/h4&gt;
-
+&lt;/div&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;填充缺失值&lt;/h4&gt;
 &lt;p&gt;这次我们详细介绍mice函数的用法&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;tempData &amp;lt;- mice(data,m=5,maxit=50,meth=&#39;pmm&#39;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;summary(tempData)
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tempData &amp;lt;- mice(data,m=5,maxit=50,meth=&amp;#39;pmm&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+##  iter imp variable
+##   1   1  Ozone  Solar.R  Wind  Temp
+##   1   2  Ozone  Solar.R  Wind  Temp
+##   1   3  Ozone  Solar.R  Wind  Temp
+##   1   4  Ozone  Solar.R  Wind  Temp
+##   1   5  Ozone  Solar.R  Wind  Temp
+##   2   1  Ozone  Solar.R  Wind  Temp
+##   2   2  Ozone  Solar.R  Wind  Temp
+##   2   3  Ozone  Solar.R  Wind  Temp
+##   2   4  Ozone  Solar.R  Wind  Temp
+##   2   5  Ozone  Solar.R  Wind  Temp
+##   3   1  Ozone  Solar.R  Wind  Temp
+##   3   2  Ozone  Solar.R  Wind  Temp
+##   3   3  Ozone  Solar.R  Wind  Temp
+##   3   4  Ozone  Solar.R  Wind  Temp
+##   3   5  Ozone  Solar.R  Wind  Temp
+##   4   1  Ozone  Solar.R  Wind  Temp
+##   4   2  Ozone  Solar.R  Wind  Temp
+##   4   3  Ozone  Solar.R  Wind  Temp
+##   4   4  Ozone  Solar.R  Wind  Temp
+##   4   5  Ozone  Solar.R  Wind  Temp
+##   5   1  Ozone  Solar.R  Wind  Temp
+##   5   2  Ozone  Solar.R  Wind  Temp
+##   5   3  Ozone  Solar.R  Wind  Temp
+##   5   4  Ozone  Solar.R  Wind  Temp
+##   5   5  Ozone  Solar.R  Wind  Temp
+##   6   1  Ozone  Solar.R  Wind  Temp
+##   6   2  Ozone  Solar.R  Wind  Temp
+##   6   3  Ozone  Solar.R  Wind  Temp
+##   6   4  Ozone  Solar.R  Wind  Temp
+##   6   5  Ozone  Solar.R  Wind  Temp
+##   7   1  Ozone  Solar.R  Wind  Temp
+##   7   2  Ozone  Solar.R  Wind  Temp
+##   7   3  Ozone  Solar.R  Wind  Temp
+##   7   4  Ozone  Solar.R  Wind  Temp
+##   7   5  Ozone  Solar.R  Wind  Temp
+##   8   1  Ozone  Solar.R  Wind  Temp
+##   8   2  Ozone  Solar.R  Wind  Temp
+##   8   3  Ozone  Solar.R  Wind  Temp
+##   8   4  Ozone  Solar.R  Wind  Temp
+##   8   5  Ozone  Solar.R  Wind  Temp
+##   9   1  Ozone  Solar.R  Wind  Temp
+##   9   2  Ozone  Solar.R  Wind  Temp
+##   9   3  Ozone  Solar.R  Wind  Temp
+##   9   4  Ozone  Solar.R  Wind  Temp
+##   9   5  Ozone  Solar.R  Wind  Temp
+##   10   1  Ozone  Solar.R  Wind  Temp
+##   10   2  Ozone  Solar.R  Wind  Temp
+##   10   3  Ozone  Solar.R  Wind  Temp
+##   10   4  Ozone  Solar.R  Wind  Temp
+##   10   5  Ozone  Solar.R  Wind  Temp
+##   11   1  Ozone  Solar.R  Wind  Temp
+##   11   2  Ozone  Solar.R  Wind  Temp
+##   11   3  Ozone  Solar.R  Wind  Temp
+##   11   4  Ozone  Solar.R  Wind  Temp
+##   11   5  Ozone  Solar.R  Wind  Temp
+##   12   1  Ozone  Solar.R  Wind  Temp
+##   12   2  Ozone  Solar.R  Wind  Temp
+##   12   3  Ozone  Solar.R  Wind  Temp
+##   12   4  Ozone  Solar.R  Wind  Temp
+##   12   5  Ozone  Solar.R  Wind  Temp
+##   13   1  Ozone  Solar.R  Wind  Temp
+##   13   2  Ozone  Solar.R  Wind  Temp
+##   13   3  Ozone  Solar.R  Wind  Temp
+##   13   4  Ozone  Solar.R  Wind  Temp
+##   13   5  Ozone  Solar.R  Wind  Temp
+##   14   1  Ozone  Solar.R  Wind  Temp
+##   14   2  Ozone  Solar.R  Wind  Temp
+##   14   3  Ozone  Solar.R  Wind  Temp
+##   14   4  Ozone  Solar.R  Wind  Temp
+##   14   5  Ozone  Solar.R  Wind  Temp
+##   15   1  Ozone  Solar.R  Wind  Temp
+##   15   2  Ozone  Solar.R  Wind  Temp
+##   15   3  Ozone  Solar.R  Wind  Temp
+##   15   4  Ozone  Solar.R  Wind  Temp
+##   15   5  Ozone  Solar.R  Wind  Temp
+##   16   1  Ozone  Solar.R  Wind  Temp
+##   16   2  Ozone  Solar.R  Wind  Temp
+##   16   3  Ozone  Solar.R  Wind  Temp
+##   16   4  Ozone  Solar.R  Wind  Temp
+##   16   5  Ozone  Solar.R  Wind  Temp
+##   17   1  Ozone  Solar.R  Wind  Temp
+##   17   2  Ozone  Solar.R  Wind  Temp
+##   17   3  Ozone  Solar.R  Wind  Temp
+##   17   4  Ozone  Solar.R  Wind  Temp
+##   17   5  Ozone  Solar.R  Wind  Temp
+##   18   1  Ozone  Solar.R  Wind  Temp
+##   18   2  Ozone  Solar.R  Wind  Temp
+##   18   3  Ozone  Solar.R  Wind  Temp
+##   18   4  Ozone  Solar.R  Wind  Temp
+##   18   5  Ozone  Solar.R  Wind  Temp
+##   19   1  Ozone  Solar.R  Wind  Temp
+##   19   2  Ozone  Solar.R  Wind  Temp
+##   19   3  Ozone  Solar.R  Wind  Temp
+##   19   4  Ozone  Solar.R  Wind  Temp
+##   19   5  Ozone  Solar.R  Wind  Temp
+##   20   1  Ozone  Solar.R  Wind  Temp
+##   20   2  Ozone  Solar.R  Wind  Temp
+##   20   3  Ozone  Solar.R  Wind  Temp
+##   20   4  Ozone  Solar.R  Wind  Temp
+##   20   5  Ozone  Solar.R  Wind  Temp
+##   21   1  Ozone  Solar.R  Wind  Temp
+##   21   2  Ozone  Solar.R  Wind  Temp
+##   21   3  Ozone  Solar.R  Wind  Temp
+##   21   4  Ozone  Solar.R  Wind  Temp
+##   21   5  Ozone  Solar.R  Wind  Temp
+##   22   1  Ozone  Solar.R  Wind  Temp
+##   22   2  Ozone  Solar.R  Wind  Temp
+##   22   3  Ozone  Solar.R  Wind  Temp
+##   22   4  Ozone  Solar.R  Wind  Temp
+##   22   5  Ozone  Solar.R  Wind  Temp
+##   23   1  Ozone  Solar.R  Wind  Temp
+##   23   2  Ozone  Solar.R  Wind  Temp
+##   23   3  Ozone  Solar.R  Wind  Temp
+##   23   4  Ozone  Solar.R  Wind  Temp
+##   23   5  Ozone  Solar.R  Wind  Temp
+##   24   1  Ozone  Solar.R  Wind  Temp
+##   24   2  Ozone  Solar.R  Wind  Temp
+##   24   3  Ozone  Solar.R  Wind  Temp
+##   24   4  Ozone  Solar.R  Wind  Temp
+##   24   5  Ozone  Solar.R  Wind  Temp
+##   25   1  Ozone  Solar.R  Wind  Temp
+##   25   2  Ozone  Solar.R  Wind  Temp
+##   25   3  Ozone  Solar.R  Wind  Temp
+##   25   4  Ozone  Solar.R  Wind  Temp
+##   25   5  Ozone  Solar.R  Wind  Temp
+##   26   1  Ozone  Solar.R  Wind  Temp
+##   26   2  Ozone  Solar.R  Wind  Temp
+##   26   3  Ozone  Solar.R  Wind  Temp
+##   26   4  Ozone  Solar.R  Wind  Temp
+##   26   5  Ozone  Solar.R  Wind  Temp
+##   27   1  Ozone  Solar.R  Wind  Temp
+##   27   2  Ozone  Solar.R  Wind  Temp
+##   27   3  Ozone  Solar.R  Wind  Temp
+##   27   4  Ozone  Solar.R  Wind  Temp
+##   27   5  Ozone  Solar.R  Wind  Temp
+##   28   1  Ozone  Solar.R  Wind  Temp
+##   28   2  Ozone  Solar.R  Wind  Temp
+##   28   3  Ozone  Solar.R  Wind  Temp
+##   28   4  Ozone  Solar.R  Wind  Temp
+##   28   5  Ozone  Solar.R  Wind  Temp
+##   29   1  Ozone  Solar.R  Wind  Temp
+##   29   2  Ozone  Solar.R  Wind  Temp
+##   29   3  Ozone  Solar.R  Wind  Temp
+##   29   4  Ozone  Solar.R  Wind  Temp
+##   29   5  Ozone  Solar.R  Wind  Temp
+##   30   1  Ozone  Solar.R  Wind  Temp
+##   30   2  Ozone  Solar.R  Wind  Temp
+##   30   3  Ozone  Solar.R  Wind  Temp
+##   30   4  Ozone  Solar.R  Wind  Temp
+##   30   5  Ozone  Solar.R  Wind  Temp
+##   31   1  Ozone  Solar.R  Wind  Temp
+##   31   2  Ozone  Solar.R  Wind  Temp
+##   31   3  Ozone  Solar.R  Wind  Temp
+##   31   4  Ozone  Solar.R  Wind  Temp
+##   31   5  Ozone  Solar.R  Wind  Temp
+##   32   1  Ozone  Solar.R  Wind  Temp
+##   32   2  Ozone  Solar.R  Wind  Temp
+##   32   3  Ozone  Solar.R  Wind  Temp
+##   32   4  Ozone  Solar.R  Wind  Temp
+##   32   5  Ozone  Solar.R  Wind  Temp
+##   33   1  Ozone  Solar.R  Wind  Temp
+##   33   2  Ozone  Solar.R  Wind  Temp
+##   33   3  Ozone  Solar.R  Wind  Temp
+##   33   4  Ozone  Solar.R  Wind  Temp
+##   33   5  Ozone  Solar.R  Wind  Temp
+##   34   1  Ozone  Solar.R  Wind  Temp
+##   34   2  Ozone  Solar.R  Wind  Temp
+##   34   3  Ozone  Solar.R  Wind  Temp
+##   34   4  Ozone  Solar.R  Wind  Temp
+##   34   5  Ozone  Solar.R  Wind  Temp
+##   35   1  Ozone  Solar.R  Wind  Temp
+##   35   2  Ozone  Solar.R  Wind  Temp
+##   35   3  Ozone  Solar.R  Wind  Temp
+##   35   4  Ozone  Solar.R  Wind  Temp
+##   35   5  Ozone  Solar.R  Wind  Temp
+##   36   1  Ozone  Solar.R  Wind  Temp
+##   36   2  Ozone  Solar.R  Wind  Temp
+##   36   3  Ozone  Solar.R  Wind  Temp
+##   36   4  Ozone  Solar.R  Wind  Temp
+##   36   5  Ozone  Solar.R  Wind  Temp
+##   37   1  Ozone  Solar.R  Wind  Temp
+##   37   2  Ozone  Solar.R  Wind  Temp
+##   37   3  Ozone  Solar.R  Wind  Temp
+##   37   4  Ozone  Solar.R  Wind  Temp
+##   37   5  Ozone  Solar.R  Wind  Temp
+##   38   1  Ozone  Solar.R  Wind  Temp
+##   38   2  Ozone  Solar.R  Wind  Temp
+##   38   3  Ozone  Solar.R  Wind  Temp
+##   38   4  Ozone  Solar.R  Wind  Temp
+##   38   5  Ozone  Solar.R  Wind  Temp
+##   39   1  Ozone  Solar.R  Wind  Temp
+##   39   2  Ozone  Solar.R  Wind  Temp
+##   39   3  Ozone  Solar.R  Wind  Temp
+##   39   4  Ozone  Solar.R  Wind  Temp
+##   39   5  Ozone  Solar.R  Wind  Temp
+##   40   1  Ozone  Solar.R  Wind  Temp
+##   40   2  Ozone  Solar.R  Wind  Temp
+##   40   3  Ozone  Solar.R  Wind  Temp
+##   40   4  Ozone  Solar.R  Wind  Temp
+##   40   5  Ozone  Solar.R  Wind  Temp
+##   41   1  Ozone  Solar.R  Wind  Temp
+##   41   2  Ozone  Solar.R  Wind  Temp
+##   41   3  Ozone  Solar.R  Wind  Temp
+##   41   4  Ozone  Solar.R  Wind  Temp
+##   41   5  Ozone  Solar.R  Wind  Temp
+##   42   1  Ozone  Solar.R  Wind  Temp
+##   42   2  Ozone  Solar.R  Wind  Temp
+##   42   3  Ozone  Solar.R  Wind  Temp
+##   42   4  Ozone  Solar.R  Wind  Temp
+##   42   5  Ozone  Solar.R  Wind  Temp
+##   43   1  Ozone  Solar.R  Wind  Temp
+##   43   2  Ozone  Solar.R  Wind  Temp
+##   43   3  Ozone  Solar.R  Wind  Temp
+##   43   4  Ozone  Solar.R  Wind  Temp
+##   43   5  Ozone  Solar.R  Wind  Temp
+##   44   1  Ozone  Solar.R  Wind  Temp
+##   44   2  Ozone  Solar.R  Wind  Temp
+##   44   3  Ozone  Solar.R  Wind  Temp
+##   44   4  Ozone  Solar.R  Wind  Temp
+##   44   5  Ozone  Solar.R  Wind  Temp
+##   45   1  Ozone  Solar.R  Wind  Temp
+##   45   2  Ozone  Solar.R  Wind  Temp
+##   45   3  Ozone  Solar.R  Wind  Temp
+##   45   4  Ozone  Solar.R  Wind  Temp
+##   45   5  Ozone  Solar.R  Wind  Temp
+##   46   1  Ozone  Solar.R  Wind  Temp
+##   46   2  Ozone  Solar.R  Wind  Temp
+##   46   3  Ozone  Solar.R  Wind  Temp
+##   46   4  Ozone  Solar.R  Wind  Temp
+##   46   5  Ozone  Solar.R  Wind  Temp
+##   47   1  Ozone  Solar.R  Wind  Temp
+##   47   2  Ozone  Solar.R  Wind  Temp
+##   47   3  Ozone  Solar.R  Wind  Temp
+##   47   4  Ozone  Solar.R  Wind  Temp
+##   47   5  Ozone  Solar.R  Wind  Temp
+##   48   1  Ozone  Solar.R  Wind  Temp
+##   48   2  Ozone  Solar.R  Wind  Temp
+##   48   3  Ozone  Solar.R  Wind  Temp
+##   48   4  Ozone  Solar.R  Wind  Temp
+##   48   5  Ozone  Solar.R  Wind  Temp
+##   49   1  Ozone  Solar.R  Wind  Temp
+##   49   2  Ozone  Solar.R  Wind  Temp
+##   49   3  Ozone  Solar.R  Wind  Temp
+##   49   4  Ozone  Solar.R  Wind  Temp
+##   49   5  Ozone  Solar.R  Wind  Temp
+##   50   1  Ozone  Solar.R  Wind  Temp
+##   50   2  Ozone  Solar.R  Wind  Temp
+##   50   3  Ozone  Solar.R  Wind  Temp
+##   50   4  Ozone  Solar.R  Wind  Temp
+##   50   5  Ozone  Solar.R  Wind  Temp&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(tempData)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Multiply imputed data set
 ## Call:
 ## mice(data = data, m = 5, method = &amp;quot;pmm&amp;quot;, maxit = 50)
@@ -250,55 +508,35 @@ aggr_plot &amp;lt;- aggr(data, col=c(&#39;navyblue&#39;,&#39;red&#39;), numbers=
 ## Solar.R     1       0    1    1
 ## Wind        1       1    0    1
 ## Temp        1       1    1    0
-## Random generator seed value:  NA
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;mice()函数用于生成填充矩阵tempData，其中的参数有：
-- data，需要填充的数据集
-- m，多重填补法的填补矩阵数。默认为5
-- method，填补用的方法，pmm代表预测均值匹配(predictive mean matching),用 methods(mice) 可以看到有哪些可用的方法
-- maxit，迭代次数，默认50次&lt;/p&gt;
-
+## Random generator seed value:  NA&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;mice()函数用于生成填充矩阵tempData，其中的参数有： - data，需要填充的数据集 - m，多重填补法的填补矩阵数。默认为5 - method，填补用的方法，pmm代表预测均值匹配(predictive mean matching),用 methods(mice) 可以看到有哪些可用的方法 - maxit，迭代次数，默认50次&lt;/p&gt;
 &lt;p&gt;如果想要查看填充的是那些值可以用以下代码：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;tempData$imp$Temp
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tempData$imp$Temp&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##      1  2  3  4  5
-## 1   83 85 84 79 83
-## 9   72 77 72 57 80
-## 33  68 93 82 68 84
-## 41  87 78 81 82 78
-## 59  82 82 68 75 58
-## 129 82 79 71 76 76
-## 137 69 75 56 73 81
-&lt;/code&gt;&lt;/pre&gt;
-
+## 1   76 79 83 86 86
+## 9   56 72 81 81 59
+## 33  86 84 94 85 83
+## 41  85 81 83 78 81
+## 59  80 58 84 82 57
+## 129 76 82 75 76 75
+## 137 61 57 59 81 57&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;最左边的一列表示的是被填充样本序号，之后的5列是多重填补法生成的5个填补矩阵对这个变量产生的填充数。&lt;/p&gt;
-
 &lt;p&gt;调用meth值可以查看每个变量用的是什么方法（前面我们指定了pmm方法）&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;tempData$meth
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tempData$meth&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##   Ozone Solar.R    Wind    Temp 
-##   &amp;quot;pmm&amp;quot;   &amp;quot;pmm&amp;quot;   &amp;quot;pmm&amp;quot;   &amp;quot;pmm&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
+##   &amp;quot;pmm&amp;quot;   &amp;quot;pmm&amp;quot;   &amp;quot;pmm&amp;quot;   &amp;quot;pmm&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;当然也可以如前一节一样对每个变量指定各自的拟合方法。&lt;/p&gt;
-
 &lt;p&gt;最后生成完全数据集：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;completedData &amp;lt;- complete(tempData,1)
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;completedData &amp;lt;- complete(tempData,1)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;1表示用tempData$imp中的第一个矩阵来填充，如果想要用其他矩阵则可以改成2，3，4等等。&lt;/p&gt;
-
-&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
-
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;reference&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Reference&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;http://datascienceplus.com/imputing-missing-data-with-r-mice-package/&#34;&gt;Imputing Missing Data with R; MICE package&lt;/a&gt;&lt;/p&gt;
-
 &lt;p&gt;&lt;a href=&#34;http://datascienceplus.com/handling-missing-data-with-mice-package-a-simple-approach/&#34;&gt;Handling missing data with MICE package; a simple approach&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
 </description>
     </item>
     
@@ -308,359 +546,211 @@ aggr_plot &amp;lt;- aggr(data, col=c(&#39;navyblue&#39;,&#39;red&#39;), numbers=
       <pubDate>Thu, 07 Jul 2016 00:00:00 +0000</pubDate>
       
       <guid>/2016/07/07/advanced-r-notes-1.data-structures/</guid>
-      <description>&lt;h1 id=&#34;advanced-r-notes-1-data-structures&#34;&gt;Advanced R Notes 1.Data structures&lt;/h1&gt;
+      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
+&lt;!-- /BLOGDOWN-HEAD --&gt;
 
+&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
+&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
+&lt;div id=&#34;advanced-r-notes-1.data-structures&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Advanced R Notes 1.Data structures&lt;/h1&gt;
 &lt;p&gt;Elara&lt;/p&gt;
-
-&lt;p&gt;Thanks for Hadley Wickham. Source available on github (&lt;a href=&#34;https://github.com/hadley/adv-r/&#34;&gt;https://github.com/hadley/adv-r/&lt;/a&gt;).&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
+&lt;p&gt;Thanks for Hadley Wickham. Source available on github (&lt;a href=&#34;https://github.com/hadley/adv-r/&#34; class=&#34;uri&#34;&gt;https://github.com/hadley/adv-r/&lt;/a&gt;).&lt;/p&gt;
+&lt;!--more--&gt;
 &lt;ul&gt;
 &lt;li&gt;分类：atomic vectors，lists&lt;/li&gt;
-&lt;li&gt;通用属性：
-type，typeof（），内含的元素的type（如logical,integer,double(numeric),character等）。所有元素type都相同则为atomic vectors，不同为lists。&lt;br /&gt;
+&lt;li&gt;通用属性： type，typeof（），内含的元素的type（如logical,integer,double(numeric),character等）。所有元素type都相同则为atomic vectors，不同为lists。&lt;br /&gt;
 Length，length（），元素个数（向量长度）&lt;br /&gt;
-Attributes，attributes（），额外的信息&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;区分：
-is.vector（）：当且仅当object是一个除了names以外，没有其他额外attributes的vector的时候，返回true
-is.atomic（）：测试是否是一个atomic vector
-is.list（）：测试是否是一个list
-&lt;br /&gt;&lt;/li&gt;
+Attributes，attributes（），额外的信息&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;区分： is.vector（）：当且仅当object是一个除了names以外，没有其他额外attributes的vector的时候，返回true is.atomic（）：测试是否是一个atomic vector is.list（）：测试是否是一个list&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h3 id=&#34;atomic-vector&#34;&gt;Atomic vector：&lt;/h3&gt;
-
+&lt;div id=&#34;atomic-vector&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Atomic vector：&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;创建方法：c（）&lt;br /&gt;
-c（c（c（）））嵌套后仍然会flat（链接成为一个向量）&lt;br /&gt;&lt;/li&gt;
+c（c（c（）））嵌套后仍然会flat（链接成为一个向量）&lt;br /&gt;
+&lt;/li&gt;
 &lt;li&gt;内含元素的type：&lt;br /&gt;
 common types：logical，integer（用1L,2L强制设定），double（numeric），character&lt;br /&gt;
 Rare types：complex，raw&lt;br /&gt;
 Types and tests：is.character(), is.double(), is.integer(), is.logical(), or, more generally, is.atomic().&lt;strong&gt;is.numeric() 在interger和double的时候都返回true&lt;/strong&gt;&lt;br /&gt;
-Coercion：Types from least to most flexible are: logical, integer, double, and character.2个不同type用c合并的时候会（按上述顺序）从前向后转化&lt;br /&gt;
-&lt;br /&gt;&lt;/li&gt;
+Coercion：Types from least to most flexible are: logical, integer, double, and character.2个不同type用c合并的时候会（按上述顺序）从前向后转化&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;lists&#34;&gt;lists&lt;/h2&gt;
-
+&lt;/div&gt;
+&lt;div id=&#34;lists&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;lists&lt;/h2&gt;
 &lt;p&gt;lists是一个内含元素type不同的向量，内含元素可以是一个list&lt;br /&gt;
 - 创建方法：list（）&lt;br /&gt;
- list(list(list(list())))会得到一个嵌套list（no flat）&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;x &amp;lt;- list(list(list(list())))
-str(x)
-&lt;/code&gt;&lt;/pre&gt;
-
+list(list(list(list())))会得到一个嵌套list（no flat）&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;x &amp;lt;- list(list(list(list())))
+str(x)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## List of 1
 ##  $ :List of 1
 ##   ..$ :List of 1
-##   .. ..$ : list()
-&lt;/code&gt;&lt;/pre&gt;
-
+##   .. ..$ : list()&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;list(list(1, 2), c(3, 4)) 内含2个item，第一个是list，第二个是c&lt;br /&gt;
- c(list(1, 2), c(3, 4))会变成一个list，4个item，每个item一个数字&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;x &amp;lt;- list(list(1, 2), c(3, 4))
+c(list(1, 2), c(3, 4))会变成一个list，4个item，每个item一个数字&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;x &amp;lt;- list(list(1, 2), c(3, 4))
 y &amp;lt;- c(list(1, 2), c(3, 4))
-str(x)
-&lt;/code&gt;&lt;/pre&gt;
-
+str(x)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## List of 2
 ##  $ :List of 2
 ##   ..$ : num 1
 ##   ..$ : num 2
-##  $ : num [1:2] 3 4
-&lt;/code&gt;&lt;/pre&gt;
-
+##  $ : num [1:2] 3 4&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;unlist().把不同type的item转化成同一种type。&lt;/p&gt;
-
-&lt;h2 id=&#34;solution-of-the-exercises&#34;&gt;Solution of the Exercises&lt;/h2&gt;
-
+&lt;/div&gt;
+&lt;div id=&#34;solution-of-the-exercises&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Solution of the Exercises&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;What are the six types of atomic vector? How does a list differ from an atomic vector?&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;interger, double, logistical, character, raw, complex.&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;What makes is.vector() and is.numeric() fundamentally different to is.list() and
-is.character()?&lt;/li&gt;
+&lt;li&gt;What makes is.vector() and is.numeric() fundamentally different to is.list() and is.character()?&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;is.vector will return true when the object is an atomic vector or a list.&lt;/p&gt;
-
 &lt;p&gt;is.list only return true when the object is a list.&lt;/p&gt;
-
 &lt;p&gt;is.numeric and is character are totally different.&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Test your knowledge of vector coercion rules by predicting the output of the following uses of c():&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;c(1, FALSE)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## [1] 1 0
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;c(&amp;quot;a&amp;quot;, 1)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;a&amp;quot; &amp;quot;1&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;c(list(1), &amp;quot;a&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;c(1, FALSE)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 1 0&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;c(&amp;quot;a&amp;quot;, 1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;a&amp;quot; &amp;quot;1&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;c(list(1), &amp;quot;a&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [[1]]
 ## [1] 1
 ## 
 ## [[2]]
-## [1] &amp;quot;a&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;c(TRUE, 1L)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## [1] 1 1
-&lt;/code&gt;&lt;/pre&gt;
-
+## [1] &amp;quot;a&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;c(TRUE, 1L)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 1 1&lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
 &lt;li&gt;Why do you need to use unlist() to convert a list to an atomic vector? Why doesn’t as.vector() work?&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;list is also a vector.&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;Why is 1 == &amp;ldquo;1&amp;rdquo; true? Why is -1 &amp;lt; FALSE true? Why is &amp;ldquo;one&amp;rdquo; &amp;lt; 2 false?&lt;/li&gt;
+&lt;li&gt;Why is 1 == “1” true? Why is -1 &amp;lt; FALSE true? Why is “one” &amp;lt; 2 false?&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;Equivalent to &amp;ldquo;1&amp;rdquo;==&amp;ldquo;1&amp;rdquo;, -1&amp;lt;0, &amp;ldquo;one&amp;rdquo;&amp;lt;&amp;ldquo;2&amp;rdquo;&lt;/p&gt;
-
+&lt;p&gt;Equivalent to “1”==“1”, -1&amp;lt;0, “one”&amp;lt;“2”&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Why is the default missing value, NA, a logical vector? What’s special about logical vectors?(Hint: think about c(FALSE, NA&lt;em&gt;character&lt;/em&gt;).)&lt;/li&gt;
+&lt;li&gt;Why is the default missing value, NA, a logical vector? What’s special about logical vectors?(Hint: think about c(FALSE, NA_character_).)&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;str(NA)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;##  logi NA
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;c(FALSE, NA_character_)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;FALSE&amp;quot; NA
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I can&amp;rsquo;t understand well. If u know the answer please tell me. Thx~&lt;/p&gt;
-
-&lt;h2 id=&#34;attributes&#34;&gt;Attributes&lt;/h2&gt;
-
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;str(NA)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  logi NA&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;c(FALSE, NA_character_)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;FALSE&amp;quot; NA&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I can’t understand well. If u know the answer please tell me. Thx~&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;attributes&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Attributes&lt;/h2&gt;
 &lt;p&gt;Attributes是所有object都有的，用于储存额外信息（如名字，特定说明文本等）&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;y &amp;lt;- 1:10
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;y &amp;lt;- 1:10
 attr(y, &amp;quot;my_attribute&amp;quot;) &amp;lt;- &amp;quot;This is a vector&amp;quot;
-attr(y, &amp;quot;my_attribute&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;This is a vector&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;str(attributes(y))
-&lt;/code&gt;&lt;/pre&gt;
-
+attr(y, &amp;quot;my_attribute&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;This is a vector&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;str(attributes(y))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## List of 1
-##  $ my_attribute: chr &amp;quot;This is a vector&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;structure(1:10, my_attribute = &amp;quot;This is a vector&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
+##  $ my_attribute: chr &amp;quot;This is a vector&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;structure(1:10, my_attribute = &amp;quot;This is a vector&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  [1]  1  2  3  4  5  6  7  8  9 10
 ## attr(,&amp;quot;my_attribute&amp;quot;)
-## [1] &amp;quot;This is a vector&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# most attributes are lost when modifying a vector,unless Names,Dimensions,Class
-attributes(y[1])
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## NULL
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;attributes(sum(y))
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## NULL
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;names&#34;&gt;Names&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;c(a = 1, b = 2, c = 3)
-&lt;/code&gt;&lt;/pre&gt;
-
+## [1] &amp;quot;This is a vector&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# most attributes are lost when modifying a vector,unless Names,Dimensions,Class
+attributes(y[1])&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## NULL&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;attributes(sum(y))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## NULL&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;names&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Names&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;c(a = 1, b = 2, c = 3)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## a b c 
-## 1 2 3
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;x &amp;lt;- 1:3; names(x) &amp;lt;- c(&amp;quot;a&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;c&amp;quot;)
-setNames(1:3, c(&amp;quot;a&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;c&amp;quot;))
-&lt;/code&gt;&lt;/pre&gt;
-
+## 1 2 3&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;x &amp;lt;- 1:3; names(x) &amp;lt;- c(&amp;quot;a&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;c&amp;quot;)
+setNames(1:3, c(&amp;quot;a&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;c&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## a b c 
-## 1 2 3
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;y &amp;lt;- c(a = 1, 2, 3); names(y)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;a&amp;quot; &amp;quot;&amp;quot;  &amp;quot;&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;z &amp;lt;- c(1, 2, 3); names(z)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## NULL
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;factors&#34;&gt;Factors&lt;/h2&gt;
-
+## 1 2 3&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;y &amp;lt;- c(a = 1, 2, 3); names(y)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;a&amp;quot; &amp;quot;&amp;quot;  &amp;quot;&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;z &amp;lt;- c(1, 2, 3); names(z)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## NULL&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;factors&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Factors&lt;/h2&gt;
 &lt;p&gt;一个factor是一个vector，但只能包含预定的值，并且用于存储分类变量。Factor是在一个integer vector的基础上加入2个特殊的attribute，class为factor，levels为预先设定的允许值。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;x &amp;lt;- factor(c(&amp;quot;a&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;a&amp;quot;));levels(x)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;a&amp;quot; &amp;quot;b&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# You can&#39;t use values that are not in the levels
-x[2] &amp;lt;- &amp;quot;c&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;x &amp;lt;- factor(c(&amp;quot;a&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;a&amp;quot;));levels(x)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;a&amp;quot; &amp;quot;b&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# You can&amp;#39;t use values that are not in the levels
+x[2] &amp;lt;- &amp;quot;c&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Warning in `[&amp;lt;-.factor`(`*tmp*`, 2, value = &amp;quot;c&amp;quot;): invalid factor level, NA
-## generated
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# you can&#39;t combine factors
-c(factor(&amp;quot;a&amp;quot;), factor(&amp;quot;b&amp;quot;))
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## [1] 1 1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;While factors look (and often behave) like character vectors, they are actually integers. Be careful
-when treating them like strings. Some string methods (like gsub() and grepl()) will coerce factors
-to strings, while others (like nchar()) will throw an error, and still others (like c()) will use the
-underlying integer values. For this reason, it’s usually best to explicitly convert factors to character
-vectors if you need string-like behaviour.&lt;/p&gt;
-
-&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;
-
+## generated&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# you can&amp;#39;t combine factors
+c(factor(&amp;quot;a&amp;quot;), factor(&amp;quot;b&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 1 1&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;While factors look (and often behave) like character vectors, they are actually integers. Be careful when treating them like strings. Some string methods (like gsub() and grepl()) will coerce factors to strings, while others (like nchar()) will throw an error, and still others (like c()) will use the underlying integer values. For this reason, it’s usually best to explicitly convert factors to character vectors if you need string-like behaviour.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exercises&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Exercises&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;An early draft used this code to illustrate structure():&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;structure(1:5, comment = &amp;quot;my attribute&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## [1] 1 2 3 4 5
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;structure(1:5, comment = &amp;quot;my attribute&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 1 2 3 4 5&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;But when you print that object you don’t see the comment attribute. Why? Is the attribute missing, or is there something else special about it? (Hint: try using help.)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;str(structure(1:5, comment = &amp;quot;my attribute&amp;quot;))
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;str(structure(1:5, comment = &amp;quot;my attribute&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  atomic [1:5] 1 2 3 4 5
-##  - attr(*, &amp;quot;comment&amp;quot;)= chr &amp;quot;my attribute&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
+##  - attr(*, &amp;quot;comment&amp;quot;)= chr &amp;quot;my attribute&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;It is a special case of not printing.&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;What happens to a factor when you modify its levels?&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;f1 &amp;lt;- factor(letters)
-f1
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;f1 &amp;lt;- factor(letters)
+f1&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  [1] a b c d e f g h i j k l m n o p q r s t u v w x y z
-## Levels: a b c d e f g h i j k l m n o p q r s t u v w x y z
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;levels(f1) &amp;lt;- rev(levels(f1))
-f1
-&lt;/code&gt;&lt;/pre&gt;
-
+## Levels: a b c d e f g h i j k l m n o p q r s t u v w x y z&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;levels(f1) &amp;lt;- rev(levels(f1))
+f1&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  [1] z y x w v u t s r q p o n m l k j i h g f e d c b a
-## Levels: z y x w v u t s r q p o n m l k j i h g f e d c b a
-&lt;/code&gt;&lt;/pre&gt;
-
+## Levels: z y x w v u t s r q p o n m l k j i h g f e d c b a&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;vector和level都倒排&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;What does this code do? How do f2 and f3 differ from f1?&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;f2 &amp;lt;- rev(factor(letters))
-f2
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;f2 &amp;lt;- rev(factor(letters))
+f2&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  [1] z y x w v u t s r q p o n m l k j i h g f e d c b a
-## Levels: a b c d e f g h i j k l m n o p q r s t u v w x y z
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;f3 &amp;lt;- factor(letters, levels = rev(letters))
-f3
-&lt;/code&gt;&lt;/pre&gt;
-
+## Levels: a b c d e f g h i j k l m n o p q r s t u v w x y z&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;f3 &amp;lt;- factor(letters, levels = rev(letters))
+f3&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  [1] a b c d e f g h i j k l m n o p q r s t u v w x y z
-## Levels: z y x w v u t s r q p o n m l k j i h g f e d c b a
-&lt;/code&gt;&lt;/pre&gt;
-
+## Levels: z y x w v u t s r q p o n m l k j i h g f e d c b a&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;f2只倒排vector，f3只倒排level。&lt;/p&gt;
-
-&lt;h2 id=&#34;matrices-and-arrays&#34;&gt;Matrices and arrays&lt;/h2&gt;
-
+&lt;/div&gt;
+&lt;div id=&#34;matrices-and-arrays&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Matrices and arrays&lt;/h2&gt;
 &lt;p&gt;Adding a &lt;strong&gt;dim()&lt;/strong&gt; attribute to an atomic vector allows it to behave like a multi-dimensional array. A special case of the array is the &lt;strong&gt;matrix&lt;/strong&gt;, which has two dimensions.&lt;/p&gt;
-
-&lt;h2 id=&#34;exercises-1&#34;&gt;Exercises&lt;/h2&gt;
-
+&lt;/div&gt;
+&lt;div id=&#34;exercises-1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Exercises&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;What does dim() return when applied to a vector?&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;x &amp;lt;- 1:5;dim(x);class(x)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## NULL
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;integer&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;dim(x)=c(1,5);class(x)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;matrix&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;x &amp;lt;- 1:5;dim(x);class(x)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## NULL&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;integer&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dim(x)=c(1,5);class(x)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;matrix&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
 &lt;li&gt;If is.matrix(x) is TRUE, what will is.array(x) return?&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;True.&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;How would you describe the following three objects? What makes them different to 1:5?&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;x1 &amp;lt;- array(1:5, c(1, 1, 5));x1
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;x1 &amp;lt;- array(1:5, c(1, 1, 5));x1&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## , , 1
 ## 
 ##      [,1]
@@ -684,21 +774,13 @@ f3
 ## , , 5
 ## 
 ##      [,1]
-## [1,]    5
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;x2 &amp;lt;- array(1:5, c(1, 5, 1));x2
-&lt;/code&gt;&lt;/pre&gt;
-
+## [1,]    5&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;x2 &amp;lt;- array(1:5, c(1, 5, 1));x2&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## , , 1
 ## 
 ##      [,1] [,2] [,3] [,4] [,5]
-## [1,]    1    2    3    4    5
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;x3 &amp;lt;- array(1:5, c(5, 1, 1));x3
-&lt;/code&gt;&lt;/pre&gt;
-
+## [1,]    1    2    3    4    5&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;x3 &amp;lt;- array(1:5, c(5, 1, 1));x3&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## , , 1
 ## 
 ##      [,1]
@@ -706,233 +788,188 @@ f3
 ## [2,]    2
 ## [3,]    3
 ## [4,]    4
-## [5,]    5
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;data-frames&#34;&gt;Data frames&lt;/h2&gt;
-
+## [5,]    5&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-frames&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data frames&lt;/h2&gt;
 &lt;p&gt;a data frame is a list of equal-length vectors.data frame是一个list&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;df &amp;lt;- data.frame(x = 1:3, y = c(&amp;quot;a&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;c&amp;quot;))
-typeof(df)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;list&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;class(df)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;data.frame&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;is.data.frame(df)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## [1] TRUE
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;df &amp;lt;- data.frame(x = 1:3, y = c(&amp;quot;a&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;c&amp;quot;))
+typeof(df)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;list&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(df)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;data.frame&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is.data.frame(df)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
 &lt;li&gt;a data frame has names(), colnames(),and rownames(), although names() and colnames() are the same thing. The length() of a data frame is the length of the underlying list and so is the same as ncol(); nrow() gives the number of rows.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;lenghth是列数，nrow是行数&lt;/p&gt;
-
 &lt;p&gt;Beware data.frame()’s default behaviour which turns strings into factors. Use stringAsFactors =FALSE to suppress this behaviour 默认会把字符串转因子。&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;You can combine data frames using cbind() and rbind():&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;cbind(df, data.frame(z = 3:1))
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;cbind(df, data.frame(z = 3:1))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##   x y z
 ## 1 1 a 3
 ## 2 2 b 2
-## 3 3 c 1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;rbind(df, data.frame(x = 10, y = &amp;quot;z&amp;quot;))
-&lt;/code&gt;&lt;/pre&gt;
-
+## 3 3 c 1&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;rbind(df, data.frame(x = 10, y = &amp;quot;z&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##    x y
 ## 1  1 a
 ## 2  2 b
 ## 3  3 c
-## 4 10 z
-&lt;/code&gt;&lt;/pre&gt;
-
+## 4 10 z&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;按列（左右连接）bind的时候，行要一样多，行名会被忽略。按行（上下连接）bind的时候，列数和列名都要一致。Use plyr::rbind.fill() to combine data frames that don’t have the same columns.&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Since a data frame is a list of vectors, it is possible for a data frame to have a column that is a list:&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;df &amp;lt;- data.frame(x = 1:3)
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;df &amp;lt;- data.frame(x = 1:3)
 df$y &amp;lt;- list(1:2, 1:3, 1:4)
-df
-&lt;/code&gt;&lt;/pre&gt;
-
+df&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##   x          y
 ## 1 1       1, 2
 ## 2 2    1, 2, 3
-## 3 3 1, 2, 3, 4
-&lt;/code&gt;&lt;/pre&gt;
-
+## 3 3 1, 2, 3, 4&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;list的item数量要和原有的向量长度一致&lt;/p&gt;
-
 &lt;p&gt;However, when a list is given to data.frame(), it tries to put each item of the list into its own&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;#data.frame(x = 1:3, y = list(1:2, 1:3, 1:4))
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#data.frame(x = 1:3, y = list(1:2, 1:3, 1:4))
 #&amp;gt; Error in data.frame(1:2, 1:3, 1:4, check.names = FALSE, stringsAsFactors = TRUE):
-#arguments imply differing number of rows: 2, 3, 4
-&lt;/code&gt;&lt;/pre&gt;
-
+#arguments imply differing number of rows: 2, 3, 4&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;data.frame()不能混合atomic vector和list&lt;/p&gt;
-
 &lt;p&gt;A workaround is to use I(), which causes data.frame() to treat the list as one unit:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;dfl &amp;lt;- data.frame(x = 1:3, y = I(list(1:2, 1:3, 1:4)))
-dfl
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dfl &amp;lt;- data.frame(x = 1:3, y = I(list(1:2, 1:3, 1:4)))
+dfl&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##   x          y
 ## 1 1       1, 2
 ## 2 2    1, 2, 3
-## 3 3 1, 2, 3, 4
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;str(dfl)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## &#39;data.frame&#39;:    3 obs. of  2 variables:
+## 3 3 1, 2, 3, 4&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;str(dfl)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## &amp;#39;data.frame&amp;#39;:    3 obs. of  2 variables:
 ##  $ x: int  1 2 3
 ##  $ y:List of 3
 ##   ..$ : int  1 2
 ##   ..$ : int  1 2 3
 ##   ..$ : int  1 2 3 4
-##   ..- attr(*, &amp;quot;class&amp;quot;)= chr &amp;quot;AsIs&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;dfl[2, &amp;quot;y&amp;quot;]
-&lt;/code&gt;&lt;/pre&gt;
-
+##   ..- attr(*, &amp;quot;class&amp;quot;)= chr &amp;quot;AsIs&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dfl[2, &amp;quot;y&amp;quot;]&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [[1]]
-## [1] 1 2 3
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;exercises-2&#34;&gt;Exercises&lt;/h2&gt;
-
+## [1] 1 2 3&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exercises-2&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Exercises&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;What attributes does a data frame possess?&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;names,row.names,class&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;What does as.matrix() do when applied to a data frame with columns of different types?&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Coercion&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Can you have a data frame with 0 rows? What about 0 columns?&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Yes,Yes.&lt;/p&gt;
-
-&lt;h2 id=&#34;quiz&#34;&gt;Quiz&lt;/h2&gt;
-
+&lt;/div&gt;
+&lt;div id=&#34;quiz&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Quiz&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;What are the three properties of a vector, other than its contents?&lt;/p&gt;&lt;/li&gt;
-
 &lt;li&gt;&lt;p&gt;What are the four common types of atomic vectors? What are the two rare types?&lt;/p&gt;&lt;/li&gt;
-
 &lt;li&gt;&lt;p&gt;What are attributes? How do you get them and set them?&lt;/p&gt;&lt;/li&gt;
-
 &lt;li&gt;&lt;p&gt;How is a list different from an atomic vector? How is a matrix different from a data frame?&lt;/p&gt;&lt;/li&gt;
-
 &lt;li&gt;&lt;p&gt;Can you have a list that is a matrix? Can a data frame have a column that is a matrix?&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Answers&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;The three properties of a vector are type, length, and attributes.&lt;/p&gt;&lt;/li&gt;
-
 &lt;li&gt;&lt;p&gt;The four common types of atomic vector are logical, integer, double (sometimes called numeric), and character. The two rarer types are complex and raw.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Attributes allow you to associate arbitrary additional metadata to any object. You can get and set individual attributes with attr(x, &amp;ldquo;y&amp;rdquo;) and attr(x, &amp;ldquo;y&amp;rdquo;) &amp;lt;- value; or get and set all attributes at once with attributes().&lt;/p&gt;&lt;/li&gt;
-
+&lt;li&gt;&lt;p&gt;Attributes allow you to associate arbitrary additional metadata to any object. You can get and set individual attributes with attr(x, “y”) and attr(x, “y”) &amp;lt;- value; or get and set all attributes at once with attributes().&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;The elements of a list can be any type (even a list); the elements of an atomic vector are all of the same type. Similarly, every element of a matrix must be the same type; in a data frame, the different columns can have different types.&lt;/p&gt;&lt;/li&gt;
-
 &lt;li&gt;&lt;p&gt;You can make “list-array” by assuming dimensions to a list. You can make a matrix a column of a data frame with df$x &amp;lt;- matrix(), or using I() when creating a new data frame data.frame(x = I(matrix())).&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
     </item>
     
     <item>
-      <title>自然语言处理入门笔记</title>
-      <link>/2016/06/29/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</link>
+      <title>Note0 for NLP</title>
+      <link>/2016/06/29/note0-for-nlp/</link>
       <pubDate>Wed, 29 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>/2016/06/29/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</guid>
-      <description>&lt;h2 id=&#34;自然语言处理入门笔记&#34;&gt;自然语言处理入门笔记&lt;/h2&gt;
+      <guid>/2016/06/29/note0-for-nlp/</guid>
+      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
+&lt;!-- /BLOGDOWN-HEAD --&gt;
 
-&lt;h3 id=&#34;统计语言模型&#34;&gt;统计语言模型&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;现代自然语言处理方法基于统计学而非规则设计。通过规则设计难以分析复杂句子并且无法快速对新生用语做出反应。&lt;br /&gt;&lt;/li&gt;
+&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
+&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
+&lt;div class=&#34;section level2&#34;&gt;
+&lt;h2&gt;自然语言处理入门笔记&lt;/h2&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;统计语言模型&lt;/h3&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;现代自然语言处理方法基于统计学而非规则设计。通过规则设计难以分析复杂句子并且无法快速对新生用语做出反应。&lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;ol&gt;
+&lt;!--more--&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;句子出现概率：&lt;br /&gt;
-一个句子S由一连串特定排列的词$w_1,w_2,\dots,w_n$构成，其中n为句子长度，那么根据条件概率公式，这个句子在文本中出现个概率为$$P(s)=P(w_1)P(w_2|w_1)P(w_3|w_1,w_2) \dots P(w_n|w_1,w_2,\dots)$$&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;显然，对于上述句子出现概率的算法太过复杂，因此引入一些假设进行简化。如引入马尔科夫假设，即假设每个词出现个概率都只和前一个词有关，与其他词无关，则句子出现概率可以简化为$$P(s)=P(w_1)P(w_2|w_1)P(w_3|w_2) \dots $$,此即为所谓的二元模型（bigram model），同理若假设每个词出现的概率只和前面N个词有关，则可建立N元模型。模型元数越多越复杂，越难估计。&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;对于每个词出现的条件概率可化为$$P(w_i|w_j)=\frac{P(w_i,w_j)}{P(w_j)}$$，（这里如果是二元模型则j=i-1），其中每个词或2个词出现的概率可用其频率进行估计，即$$P(w_i,w_j) = \frac{count(w_j,w_i)}{count}$$,$$P(w_j) = \frac{count(w_j)}{count}$$，所以$$P(w_i|w_j) = \frac{count(w_j,w_i)}{count(w_j)}$$&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;然而很多词及其组合出现频率较小，甚至在样本中无法出现，解决办法：古德-图灵估计。从概率的总量中分配一小部分给没有在样本中观察到的事件，同时对看得见的事件中，出现频率小的事件再调小其概率（即“越是不可信的统计折扣越多”）。具体来说，如果在语料库中出现r次的词有$N_r$个，对于出现频率较小的词（r较小），计算其概率时用更小的概率$d_r=(r+1)\frac{N_R}{N_r}/count$,这里R=r+1,则没有出现的词有$d_0=N_1/N_0$,得到一个很小的正数概率，从而解决这个问题。即当$$count(w_i) &amp;lt;= T$$,$$P(w_i) = \frac{count(w_i)}{count}$$,否则$$P(w_i) = d_r=(r+1)\frac{N_R}{N_r}$$。同理对于$$P(w_i|w_j)$$也可以类似处理，经过古德-图灵方法打折求条件概率的方法叫卡茨退避法。其中T是一个阈值一般是8-10左右。&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;训练模型的语料库的选取，要根据模型应用的领域进行。训练模型的过程基本上和训练隐马儿可夫模型类似，需要一个训练算法（鲍姆-韦尔奇算法）和使用的解码算法（维特比算法）。&lt;br /&gt;&lt;/li&gt;
+一个句子S由一连串特定排列的词&lt;span class=&#34;math inline&#34;&gt;\(w_1,w_2,\dots,w_n\)&lt;/span&gt;构成，其中n为句子长度，那么根据条件概率公式，这个句子在文本中出现个概率为&lt;span class=&#34;math display&#34;&gt;\[P(s)=P(w_1)P(w_2|w_1)P(w_3|w_1,w_2) \dots P(w_n|w_1,w_2,\dots)\]&lt;/span&gt;&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;显然，对于上述句子出现概率的算法太过复杂，因此引入一些假设进行简化。如引入马尔科夫假设，即假设每个词出现个概率都只和前一个词有关，与其他词无关，则句子出现概率可以简化为&lt;span class=&#34;math display&#34;&gt;\[P(s)=P(w_1)P(w_2|w_1)P(w_3|w_2) \dots \]&lt;/span&gt;,此即为所谓的二元模型（bigram model），同理若假设每个词出现的概率只和前面N个词有关，则可建立N元模型。模型元数越多越复杂，越难估计。&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;对于每个词出现的条件概率可化为&lt;span class=&#34;math display&#34;&gt;\[P(w_i|w_j)=\frac{P(w_i,w_j)}{P(w_j)}\]&lt;/span&gt;，（这里如果是二元模型则j=i-1），其中每个词或2个词出现的概率可用其频率进行估计，即&lt;span class=&#34;math display&#34;&gt;\[P(w_i,w_j) = \frac{count(w_j,w_i)}{count}\]&lt;/span&gt;,&lt;span class=&#34;math display&#34;&gt;\[P(w_j) = \frac{count(w_j)}{count}\]&lt;/span&gt;，所以&lt;span class=&#34;math display&#34;&gt;\[P(w_i|w_j) = \frac{count(w_j,w_i)}{count(w_j)}\]&lt;/span&gt;&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;然而很多词及其组合出现频率较小，甚至在样本中无法出现，解决办法：古德-图灵估计。从概率的总量中分配一小部分给没有在样本中观察到的事件，同时对看得见的事件中，出现频率小的事件再调小其概率（即“越是不可信的统计折扣越多”）。具体来说，如果在语料库中出现r次的词有&lt;span class=&#34;math inline&#34;&gt;\(N_r\)&lt;/span&gt;个，对于出现频率较小的词（r较小），计算其概率时用更小的概率&lt;span class=&#34;math inline&#34;&gt;\(d_r=(r+1)\frac{N_R}{N_r}/count\)&lt;/span&gt;,这里R=r+1,则没有出现的词有&lt;span class=&#34;math inline&#34;&gt;\(d_0=N_1/N_0\)&lt;/span&gt;,得到一个很小的正数概率，从而解决这个问题。即当&lt;span class=&#34;math display&#34;&gt;\[count(w_i) &amp;lt;= T\]&lt;/span&gt;,&lt;span class=&#34;math display&#34;&gt;\[P(w_i) = \frac{count(w_i)}{count}\]&lt;/span&gt;,否则&lt;span class=&#34;math display&#34;&gt;\[P(w_i) = d_r=(r+1)\frac{N_R}{N_r}\]&lt;/span&gt;。同理对于&lt;span class=&#34;math display&#34;&gt;\[P(w_i|w_j)\]&lt;/span&gt;也可以类似处理，经过古德-图灵方法打折求条件概率的方法叫卡茨退避法。其中T是一个阈值一般是8-10左右。&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;训练模型的语料库的选取，要根据模型应用的领域进行。训练模型的过程基本上和训练隐马儿可夫模型类似，需要一个训练算法（鲍姆-韦尔奇算法）和使用的解码算法（维特比算法）。&lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;h3 id=&#34;分词算法&#34;&gt;分词算法&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;思想：假设一个句子有N种分法，每种分法都可以根据上述方法求出这个句子出现的概率。那么最优的分法就是让这个句子出现概率最大的分法。（极大似然的思想）&lt;br /&gt;&lt;/li&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;分词算法&lt;/h3&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;思想：假设一个句子有N种分法，每种分法都可以根据上述方法求出这个句子出现的概率。那么最优的分法就是让这个句子出现概率最大的分法。（极大似然的思想）&lt;br /&gt;
+&lt;/li&gt;
 &lt;li&gt;实现方法：对每种分法都进行计算显然计算量太大，通常转换成一个动态规划问题，根据维特比算法找到最佳分词。&lt;/li&gt;
-&lt;li&gt;算法已经得到较高的准确度，再深入研究进行准确度的提升已经不容易。同时不同的人之间分词都有差异，机器分词的准确率小幅度的差异并不能作为评判好坏的唯一标准。&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;分词的颗粒度：即对一个整体词的细分程度，如清华大学是否要再分为清华和大学。一个分词器一般都可以由用户自行决定颗粒度。完善用于再细分的复合词的词典（通过数据挖掘）是近年中文分词工作重点。&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;算法已经得到较高的准确度，再深入研究进行准确度的提升已经不容易。同时不同的人之间分词都有差异，机器分词的准确率小幅度的差异并不能作为评判好坏的唯一标准。&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;分词的颗粒度：即对一个整体词的细分程度，如清华大学是否要再分为清华和大学。一个分词器一般都可以由用户自行决定颗粒度。完善用于再细分的复合词的词典（通过数据挖掘）是近年中文分词工作重点。&lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;h3 id=&#34;信息论概念&#34;&gt;信息论概念&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;信息熵：H(X),事件X或者信息X内涵的信息量。H(X|Y)：条件熵，已知Y条件下H事件的信息量。更多：[中文信息熵](&amp;ldquo;&lt;a href=&#34;http://dsd.future-lab.cn/members/2015nlp/readings/%E6%B1%89%E8%AF%AD%E4%BF%A1%E6%81%AF%E7%86%B5%E5%92%8C%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%A4%8D%E6%9D%82%E5%BA%A6.pdf&amp;quot;&#34;&gt;http://dsd.future-lab.cn/members/2015nlp/readings/%E6%B1%89%E8%AF%AD%E4%BF%A1%E6%81%AF%E7%86%B5%E5%92%8C%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%A4%8D%E6%9D%82%E5%BA%A6.pdf&amp;quot;&lt;/a&gt;)&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;互信息：两个随机事件相关性的度量方法（类似相关系数，但是相关系数要用于随机变量），定义为$$I(X;Y)=\sum P(x,y)log\frac{P(x,y)}{P(x)P(y)}=H(X)-H(X|Y)$$。应用：机器翻译的时候Bush可以翻译为布什和灌木丛，做法是先从大量文本中找出和布什一起出现的互信息最大的词，同理找出和灌木丛一起出现的互信息最大的词，则翻译的时候看上下文哪一类词多就可以了。&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;相对熵。&lt;br /&gt;&lt;/li&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;信息论概念&lt;/h3&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;信息熵：H(X),事件X或者信息X内涵的信息量。H(X|Y)：条件熵，已知Y条件下H事件的信息量。更多：&lt;a href=&#34;%22http://dsd.future-lab.cn/members/2015nlp/readings/%E6%B1%89%E8%AF%AD%E4%BF%A1%E6%81%AF%E7%86%B5%E5%92%8C%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%A4%8D%E6%9D%82%E5%BA%A6.pdf%22&#34;&gt;中文信息熵&lt;/a&gt;&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;互信息：两个随机事件相关性的度量方法（类似相关系数，但是相关系数要用于随机变量），定义为&lt;span class=&#34;math display&#34;&gt;\[I(X;Y)=\sum P(x,y)log\frac{P(x,y)}{P(x)P(y)}=H(X)-H(X|Y)\]&lt;/span&gt;。应用：机器翻译的时候Bush可以翻译为布什和灌木丛，做法是先从大量文本中找出和布什一起出现的互信息最大的词，同理找出和灌木丛一起出现的互信息最大的词，则翻译的时候看上下文哪一类词多就可以了。&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;相对熵。&lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;h3 id=&#34;关键词权重度量方法-tf-idf&#34;&gt;关键词权重度量方法：TF-IDF&lt;/h3&gt;
-
-&lt;p&gt;TF:term frequency,单文本词频，即一组关键词的各个词，在文本中出现的频率之和（若只是一个词，则就是这个词的频率）。但是如果直接根据分词从一个句子中分出的词可能含有“的”这种没用的词，叫做停止词，应当被忽略。只用TF会使得关键词只能体现高频词，而无法体现一些特定场合才会出现的重要词汇。所以还要用一个权重IDF：inverse document frequency，逆文本频率指数，公式为$log\frac{D}{D_w}$，D是总文章数或者总网页数（语料库总数），$D_w$是语料库中含有某个词的文章数或网页数。则一个关键词w的TF-IDF值为$TF_w \cdot IDF_w$，一组词或者一句话的TF-IDF值为$\sum TF_i \cdot IDF_i$,i对应这句话中的每个词（去掉停止词，或者说停止词权重设定为0）。TF-IDF度量的是一句话或者一个词在一篇文本或者一个网页中的重要度。&lt;/p&gt;
-
-&lt;h3 id=&#34;文本特征向量&#34;&gt;文本特征向量&lt;/h3&gt;
-
+&lt;/div&gt;
+&lt;div id=&#34;tf-idf&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;关键词权重度量方法：TF-IDF&lt;/h3&gt;
+&lt;p&gt;TF:term frequency,单文本词频，即一组关键词的各个词，在文本中出现的频率之和（若只是一个词，则就是这个词的频率）。但是如果直接根据分词从一个句子中分出的词可能含有“的”这种没用的词，叫做停止词，应当被忽略。只用TF会使得关键词只能体现高频词，而无法体现一些特定场合才会出现的重要词汇。所以还要用一个权重IDF：inverse document frequency，逆文本频率指数，公式为&lt;span class=&#34;math inline&#34;&gt;\(log\frac{D}{D_w}\)&lt;/span&gt;，D是总文章数或者总网页数（语料库总数），&lt;span class=&#34;math inline&#34;&gt;\(D_w\)&lt;/span&gt;是语料库中含有某个词的文章数或网页数。则一个关键词w的TF-IDF值为&lt;span class=&#34;math inline&#34;&gt;\(TF_w \cdot IDF_w\)&lt;/span&gt;，一组词或者一句话的TF-IDF值为&lt;span class=&#34;math inline&#34;&gt;\(\sum TF_i \cdot IDF_i\)&lt;/span&gt;,i对应这句话中的每个词（去掉停止词，或者说停止词权重设定为0）。TF-IDF度量的是一句话或者一个词在一篇文本或者一个网页中的重要度。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;文本特征向量&lt;/h3&gt;
 &lt;p&gt;对一篇文本的所有实词（虚词对于文本的内容没有太大信息量，可以认为是噪音，剔除后可以提高效率），计算其TF-IDF值，然后按照词汇表中每个词的位置（如词汇表中第一个词是阿，第二个是啊，第700个是服装），把文章中出现的词TF-IDF对应放到对应位置，没有出现的词设定TF-IDF为0，那么就得到长度和词汇表词数相等的一个向量，这个向量就是这篇文章的特征向量。&lt;br /&gt;
 若要度量文本的相似度，就可以直接计算不同文本的特征向量的余弦距离。从而达到文本聚类的目的，首先把文本两两计算余弦距离，最近的分为一类，划分成几个小类，把小类中的文本全部合并当成一篇，计算其特征向量作为类的特征向量，再次计算余弦距离，再次分类，以此类推直到相关性很弱，停止聚类。另外，出现在标题等重要位置的词的意义应该更大，可以调整权重使其权重更大。&lt;/p&gt;
-
-&lt;h3 id=&#34;奇异值分解-svd-singular-value-decomposition&#34;&gt;奇异值分解（SVD：singular value decomposition）&lt;/h3&gt;
-
+&lt;/div&gt;
+&lt;div id=&#34;svdsingular-value-decomposition&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;奇异值分解（SVD：singular value decomposition）&lt;/h3&gt;
 &lt;p&gt;如果有N个词，M篇文本，如果把每篇文本的特征向量作为一行，则M篇文本可以合并成一个M行N列的矩阵。通过SVD可以得到3个矩阵X B Y，X是一个Mxn的矩阵，每一行表示一篇文本，每一列表示一个主题（假设分解出了n个主题），则每个元素表示这篇文本与这个主题的相关性。Y为一个nxN的矩阵，则每一列表示一个词，每一行表示一个词类，每个元素表示这个词与这个词类的相关性。B为一个nxn矩阵，每一行表示一个主题，每一列表示一个词类，每个元素则表示一个词类和一个主题的相关性。通过SVD就可以粗略地把一个语料库中的所有文本进行主题分类和词类分类（近义词分类）。这和前面的余弦距离聚类相比，优点是速度更快，不需要一次次迭代，缺点是精度不足且内存需求大。可以先进行SVD作为粗分类，再用余弦距离法继续迭代。&lt;/p&gt;
-
-&lt;h3 id=&#34;几个模型&#34;&gt;几个模型&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;马尔可夫链：每个状态的取值取决于前面有限个状态。&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;贝叶斯网络：各个事物之间的关系不止是一条链，而是一个网络，即每个状态可能和很多个其他状态有关，但是马尔可夫假设成立，每个状态都和他直接相连的状态有关，这种有向图就是贝叶斯网络&lt;br /&gt;&lt;/li&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;几个模型&lt;/h3&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;马尔可夫链：每个状态的取值取决于前面有限个状态。&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;贝叶斯网络：各个事物之间的关系不止是一条链，而是一个网络，即每个状态可能和很多个其他状态有关，但是马尔可夫假设成立，每个状态都和他直接相连的状态有关，这种有向图就是贝叶斯网络&lt;br /&gt;
+&lt;/li&gt;
 &lt;li&gt;条件随机场：如果贝叶斯网络成为一个无向图，则为条件随机场。&lt;/li&gt;
-&lt;/ol&gt;</description>
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
     </item>
     
     <item>
