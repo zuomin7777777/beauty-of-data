@@ -69,7 +69,9 @@
 
 <!-- BLOGDOWN-BODY-BEFORE -->
 <!-- /BLOGDOWN-BODY-BEFORE -->
-<p>作者：王泽贤</p>
+<div class="section level1">
+<h1>作者：王泽贤</h1>
+</div>
 <div id="r-" class="section level1">
 <h1>1. R 的性能瓶颈</h1>
 <ol style="list-style-type: decimal">
@@ -115,10 +117,10 @@ fibonacci_seq &lt;- function(n) {
 }
 microbenchmark::microbenchmark(fibonacci_seq(25), unit = &quot;ms&quot;)</code></pre>
 <pre><code>## Unit: milliseconds
-##               expr      min        lq       mean   median       uq
-##  fibonacci_seq(25) 0.035457 0.0382565 0.04127658 0.041522 0.043233
-##       max neval
-##  0.065626   100</code></pre>
+##               expr      min      lq       mean   median        uq      max
+##  fibonacci_seq(25) 0.034524 0.03779 0.04019734 0.040278 0.0424555 0.060962
+##  neval
+##    100</code></pre>
 <p>可以看到代码的优化可以产生巨大的加速效果</p>
 </div>
 

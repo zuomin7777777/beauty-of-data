@@ -19,7 +19,8 @@
 
 &lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
 &lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
-&lt;p&gt;译者：王泽贤&lt;/p&gt;
+&lt;div class=&#34;section level1&#34;&gt;
+&lt;h1&gt;译者：王泽贤&lt;/h1&gt;
 &lt;p&gt;我已经在学术界和工业界进行了许多年的机器学习建模工作，在看了一系列讨论“大数据”实用性问题的优秀视频 &lt;a href=&#34;https://www.safaribooksonline.com/library/view/scalable-machine-learning/9781491939437/video233428.html&#34;&gt;Scalable ML&lt;/a&gt; 后，我开始思考总结一些在学习机器学习时，我希望能够尽早明白的事情。视频来源于 Mikio Braun，介绍了 Scala 和 Spark 相关的知识。&lt;/p&gt;
 &lt;!-- more --&gt;
 &lt;p&gt;我希望在学习机器学习时能够尽早明白的事情有三项：&lt;/p&gt;
@@ -52,6 +53,7 @@
 &lt;div class=&#34;section level2&#34;&gt;
 &lt;h2&gt;作者简介：&lt;/h2&gt;
 &lt;p&gt;Peadar Coyle，数据科学家，开源软件贡献者，演讲家与作家。先后就职于 Amazon、Vodafone、JOB TODAY、Channel 4、Elevate Direct 等，在数据驱动解决方案设计开发中具有丰富的经验。&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>

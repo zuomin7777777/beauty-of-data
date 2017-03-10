@@ -10,7 +10,7 @@ tags:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-作者：王泽贤
+# 作者：王泽贤
 
 # Advanced R Notes 1.Data structures
 

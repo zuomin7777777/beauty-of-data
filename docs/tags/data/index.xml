@@ -14,7 +14,8 @@
       <pubDate>Sun, 10 Jul 2016 00:00:00 +0000</pubDate>
       
       <guid>/2016/07/10/deal-with-missing-value/</guid>
-      <description>&lt;p&gt;作者：王泽贤&lt;/p&gt;
+      <description>&lt;div class=&#34;section level1&#34;&gt;
+&lt;h1&gt;作者：王泽贤&lt;/h1&gt;
 &lt;div class=&#34;section level2&#34;&gt;
 &lt;h2&gt;简介&lt;/h2&gt;
 &lt;p&gt;缺失值是一个实际数据处理中常见的问题。其缺失机制大致可以分为完全随机缺失（MCAR），非随机缺失（MNAR）&lt;/p&gt;
@@ -487,6 +488,7 @@ apply(data,2,miss)&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;Reference&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;http://datascienceplus.com/imputing-missing-data-with-r-mice-package/&#34;&gt;Imputing Missing Data with R; MICE package&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;http://datascienceplus.com/handling-missing-data-with-mice-package-a-simple-approach/&#34;&gt;Handling missing data with MICE package; a simple approach&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>

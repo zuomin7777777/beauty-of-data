@@ -10,7 +10,7 @@ tags:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-作者：王泽贤
+# 作者：王泽贤
 
 ## 自然语言处理入门笔记         
 ### 统计语言模型         
