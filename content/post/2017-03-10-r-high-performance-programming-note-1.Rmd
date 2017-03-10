@@ -57,4 +57,4 @@ fibonacci_seq <- function(n) {
 microbenchmark::microbenchmark(fibonacci_seq(25), unit = "ms")
 ```
 
-
+可以看到代码的优化可以产生巨大的加速效果

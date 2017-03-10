@@ -114,10 +114,11 @@ fibonacci_seq &lt;- function(n) {
 }
 microbenchmark::microbenchmark(fibonacci_seq(25), unit = &quot;ms&quot;)</code></pre>
 <pre><code>## Unit: milliseconds
-##               expr      min       lq      mean   median       uq      max
-##  fibonacci_seq(25) 0.035457 0.038723 0.0432267 0.042144 0.043855 0.080245
-##  neval
-##    100</code></pre>
+##               expr      min        lq      mean    median        uq
+##  fibonacci_seq(25) 0.037946 0.0433885 0.0465577 0.0460325 0.0489865
+##       max neval
+##  0.069047   100</code></pre>
+<p>可以看到代码的优化可以产生巨大的加速效果</p>
 </div>
 
     </div>
