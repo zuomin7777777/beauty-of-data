@@ -19,9 +19,9 @@
 
 &lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
 &lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
+&lt;p&gt;作者：王泽贤&lt;/p&gt;
 &lt;div id=&#34;advanced-r-notes-1.data-structures&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Advanced R Notes 1.Data structures&lt;/h1&gt;
-&lt;p&gt;Elara&lt;/p&gt;
 &lt;p&gt;Thanks for Hadley Wickham. Source available on github (&lt;a href=&#34;https://github.com/hadley/adv-r/&#34; class=&#34;uri&#34;&gt;https://github.com/hadley/adv-r/&lt;/a&gt;).&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;分类：atomic vectors，lists&lt;/li&gt;
@@ -369,6 +369,7 @@ dfl&lt;/code&gt;&lt;/pre&gt;
 
 &lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
 &lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
+&lt;p&gt;作者：王泽贤&lt;/p&gt;
 &lt;div class=&#34;section level2&#34;&gt;
 &lt;h2&gt;自然语言处理入门笔记&lt;/h2&gt;
 &lt;div class=&#34;section level3&#34;&gt;

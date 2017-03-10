@@ -10,8 +10,9 @@ tags:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+作者：王泽贤
+
 # Advanced R Notes 1.Data structures
-Elara  
 
 
 Thanks for Hadley Wickham. Source available on github (https://github.com/hadley/adv-r/).
