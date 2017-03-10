@@ -11,9 +11,7 @@ categories:
 
 # 为什么需要 git
 
-1. 版本管理
-
-![版本管理](http://www.liaoxuefeng.com/files/attachments/0013848606651673ff1c83932d249118bf8fd5c58c15ca2000/0)
+1. ![版本管理](http://www.liaoxuefeng.com/files/attachments/0013848606651673ff1c83932d249118bf8fd5c58c15ca2000/0)
 
 2. [历史回溯](https://github.com/elara7/R-in-SOE/commits/master)
 

@@ -25,13 +25,10 @@
 &lt;div id=&#34;-git&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;为什么需要 git&lt;/h1&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;版本管理&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;figure&#34;&gt;
+&lt;li&gt;&lt;div class=&#34;figure&#34;&gt;
 &lt;img src=&#34;http://www.liaoxuefeng.com/files/attachments/0013848606651673ff1c83932d249118bf8fd5c58c15ca2000/0&#34; alt=&#34;版本管理&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;版本管理&lt;/p&gt;
-&lt;/div&gt;
-&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/elara7/R-in-SOE/commits/master&#34;&gt;历史回溯&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/rstudio/tensorflow/commits/master&#34;&gt;协同工作&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
