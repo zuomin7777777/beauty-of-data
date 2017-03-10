@@ -18,10 +18,13 @@ categories:
 <div id="-git" class="section level1">
 <h1>为什么需要 git</h1>
 <ol style="list-style-type: decimal">
-<li><div class="figure">
-<img src="http://www.liaoxuefeng.com/files/attachments/0013848606651673ff1c83932d249118bf8fd5c58c15ca2000/0" alt="版本管理" />
-<p class="caption">版本管理</p>
-</div></li>
+<li>版本管理</li>
+</ol>
+<div class="figure">
+<img src="http://www.liaoxuefeng.com/files/attachments/0013848606651673ff1c83932d249118bf8fd5c58c15ca2000/0" />
+
+</div>
+<ol start="2" style="list-style-type: decimal">
 <li><p><a href="https://github.com/elara7/R-in-SOE/commits/master">历史回溯</a></p></li>
 <li><p><a href="https://github.com/rstudio/tensorflow/commits/master">协同工作</a></p></li>
 </ol>
@@ -30,6 +33,90 @@ categories:
 <div id="git-" class="section level1">
 <h1>git 是什么</h1>
 <ul>
-<li><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137402760310626208b4f695940a49e5348b689d095fc000%5D">git 的诞生</a></li>
+<li><p><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137402760310626208b4f695940a49e5348b689d095fc000%5D">git 的诞生</a></p></li>
+<li><p><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001374027586935cf69c53637d8458c9aec27dd546a6cd6000">集中式 vs 分布式</a></p></li>
+</ul>
+</div>
+<div id="github-gitlab-gitbucket" class="section level1">
+<h1>github gitlab GitBucket…</h1>
+<p>基于 git 实现的服务</p>
+<p><a href="https://github.com/">github</a>：全球最大开源程序源代码托管（<del>同性交友</del>）网站，如：</p>
+<ul>
+<li><p><a href="https://github.com/rstudio">rstudio</a></p></li>
+<li><p><a href="https://github.com/tensorflow">Tensorflow</a></p></li>
+<li><p><a href="https://github.com/qinwf/jiebaR">jiebar</a></p></li>
+<li><p><a href="https://github.com/pandas-dev/pandas">pandas</a></p></li>
+</ul>
+<p><a href="https://gitlab.com/">gitlab</a>：免费创建私密库</p>
+<p><a href="https://bitbucket.org/">BitBucket</a></p>
+</div>
+<div id="-github-rstudio" class="section level1">
+<h1>为什么是 github + rstudio</h1>
+<p><del>因为我 R 用的多</del></p>
+<p>R studio 集成了完整的 git 功能，即使在不同平台（win、mac、linux）中也有相同的工作方式，对 R User 来说比较方便</p>
+</div>
+<div class="section level1">
+<h1>前期准备</h1>
+<p>FAN QIANG</p>
+</div>
+<div class="section level1">
+<h1>习惯养成</h1>
+<ul>
+<li><p>程序（git、R、Rstudio 等等）都用默认路径安装</p></li>
+<li><p>拒绝中文路径名（包括文件名）</p></li>
+</ul>
+</div>
+<div id="-git" class="section level1">
+<h1>安装 git</h1>
+<p>windows：安装 <a href="https://git-scm.com/">git-scm</a></p>
+<p>安装后找到 <code>git.exe</code> ，默认在 [C:Files](C:Files) 内，记下路径 即 [C:Files](C:Files.exe](“C:Files](C:Files.exe”)</p>
+<p>安装后打开 R Studio，检查 Tools - Global Options - Git/SVN - Git executable 中填写上一步找到的路径（或直接利用其 Browse 功能找到 <code>git.exe</code> ）</p>
+<p>ubuntu： sudo apt-get install git</p>
+<p>mac： <a href="www.google.com">看着办:)</a></p>
+<p>mac和linux应该安装后即可，无须配置</p>
+</div>
+<div id="-github" class="section level1">
+<h1>注册 github</h1>
+<p><a href="https://github.com/">你一定会！</a></p>
+</div>
+<div id="-git" class="section level1">
+<h1>配置 git</h1>
+<p>打开 R studio - Tools - Shell</p>
+<div class="section level3">
+<h3>自报家门</h3>
+<pre><code>git config --global user.name &quot;elara15598&quot;
+git config --global user.email &quot;elara15598@gmail.com&quot;</code></pre>
+<p>(替换为自己的用户名和邮箱，不一定和github一样，自己定义)</p>
+</div>
+<div class="section level3">
+<h3>设置代理</h3>
+<p>如果你用的是 SS：</p>
+<pre><code>git config --global http.proxy &#39;socks5://127.0.0.1:1080&#39; 
+git config --global https.proxy &#39;socks5://127.0.0.1:1080&#39;</code></pre>
+<p>其他方式可以试试打开全局代理来加速（厦大图书馆 vpn 貌似走的是 CN2 专线宽带，可能有神秘力量）</p>
+<p>当然不代理也行，就是<sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub><sub>~</sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub></sub><sub><sub><sub><sub><sub><sub>~</sub></sub></sub></sub></sub></sub></sub>慢</p>
+</div>
+<div class="section level3">
+<h3>配置密钥</h3>
+<p>R studio - Tools - Global Options - Git/SVN - SSH RSA Key - Creat RSA Key…</p>
+<p>弹出的窗口中的两个空栏为密码和重复密码，可以留空</p>
+<p>生成完成后 Close，点 View public key，将弹窗的所有文本内容复制到剪贴板</p>
+<p>登陆 Github，右上角头像 - Settings - SSH and GPG keys - New SSH key - 将上一步的内容复制到 Key 中，Title 你开心就好 - Add SSH Keys</p>
+</div>
+</div>
+<div class="section level1">
+<h1>创建一个库</h1>
+<p>进入 Github 首页 - New repository - 输入名字（描述可选） - 复制库页面地址</p>
+<p>进入 R studio - File - New Project - Version Control - Git - 第一格填入上述地址，第三个填入本地存储文件夹 - Create Project</p>
+<p>之后就可以在项目文件加中工作和同步了</p>
+</div>
+<div class="section level1">
+<h1>提交更改</h1>
+<p>当你在文件夹中修改完成后，打开文件夹中的 .Rproj 文件进入 Rstudio - git图标（搜索框右边） - Commit - 选择要更改的文件 - 填写更改说明 - Commit</p>
+<p>再点击右上角 push，如有弹出框则按照说明填写 github 用户名、邮箱和密码即可</p>
+<ul>
+<li><p>commit：确认更改，并将更改提交到本地缓存中</p></li>
+<li><p>push：将本地的更改提交到云端</p></li>
+<li><p>pull：将云端拉回到本地</p></li>
 </ul>
 </div>

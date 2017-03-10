@@ -11,7 +11,9 @@ categories:
 
 # 为什么需要 git
 
-1. ![版本管理](http://www.liaoxuefeng.com/files/attachments/0013848606651673ff1c83932d249118bf8fd5c58c15ca2000/0)
+1. 版本管理
+
+![](http://www.liaoxuefeng.com/files/attachments/0013848606651673ff1c83932d249118bf8fd5c58c15ca2000/0)
 
 2. [历史回溯](https://github.com/elara7/R-in-SOE/commits/master)
 
@@ -22,3 +24,115 @@ categories:
 # git 是什么
 
 - [git 的诞生](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137402760310626208b4f695940a49e5348b689d095fc000])
+
+- [集中式 vs 分布式](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001374027586935cf69c53637d8458c9aec27dd546a6cd6000)
+
+# github gitlab GitBucket...
+
+基于 git 实现的服务
+
+[github](https://github.com/)：全球最大开源程序源代码托管（~~同性交友~~）网站，如：
+
+- [rstudio](https://github.com/rstudio)
+
+- [Tensorflow](https://github.com/tensorflow)
+
+- [jiebar](https://github.com/qinwf/jiebaR)
+
+- [pandas](https://github.com/pandas-dev/pandas)
+
+[gitlab](https://gitlab.com/)：免费创建私密库
+
+[BitBucket](https://bitbucket.org/)
+
+# 为什么是 github + rstudio
+
+~~因为我 R 用的多~~
+
+R studio 集成了完整的 git 功能，即使在不同平台（win、mac、linux）中也有相同的工作方式，对 R User 来说比较方便
+
+# 前期准备
+
+FAN QIANG
+
+# 习惯养成
+
+- 程序（git、R、Rstudio 等等）都用默认路径安装
+
+- 拒绝中文路径名（包括文件名）
+
+# 安装 git
+
+windows：安装 [git-scm](https://git-scm.com/)
+
+安装后找到 `git.exe` ，默认在 [C:\Program Files\Git\bin\](C:\Program Files\Git\bin\) 内，记下路径
+即 [C:\Program Files\Git\bin\](C:\Program Files\Git\bin\git.exe]("C:\Program Files\Git\bin\](C:\Program Files\Git\bin\git.exe")
+
+安装后打开 R Studio，检查 Tools - Global Options - Git/SVN -  Git executable 中填写上一步找到的路径（或直接利用其 Browse 功能找到 `git.exe` ）
+
+ubuntu： sudo apt-get install git
+
+mac： [看着办:)](www.google.com)
+
+mac和linux应该安装后即可，无须配置
+
+# 注册 github
+
+[你一定会！](https://github.com/)
+
+# 配置 git
+
+打开 R studio - Tools - Shell
+
+### 自报家门
+
+```
+git config --global user.name "elara15598"
+git config --global user.email "elara15598@gmail.com"
+```
+
+(替换为自己的用户名和邮箱，不一定和github一样，自己定义)
+
+### 设置代理
+
+如果你用的是 SS：
+
+```
+git config --global http.proxy 'socks5://127.0.0.1:1080' 
+git config --global https.proxy 'socks5://127.0.0.1:1080'
+```
+
+其他方式可以试试打开全局代理来加速（厦大图书馆 vpn 貌似走的是 CN2 专线宽带，可能有神秘力量）
+
+当然不代理也行，就是~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~慢
+
+### 配置密钥
+
+R studio - Tools - Global Options - Git/SVN - SSH RSA Key - Creat RSA Key... 
+
+弹出的窗口中的两个空栏为密码和重复密码，可以留空
+
+生成完成后 Close，点 View public key，将弹窗的所有文本内容复制到剪贴板
+
+登陆 Github，右上角头像 - Settings - SSH and GPG keys - New SSH key - 将上一步的内容复制到 Key 中，Title 你开心就好 - Add SSH Keys
+
+# 创建一个库
+
+进入 Github 首页 - New repository - 输入名字（描述可选） - 复制库页面地址
+
+进入 R studio - File - New Project - Version Control - Git - 第一格填入上述地址，第三个填入本地存储文件夹 - Create Project 
+
+之后就可以在项目文件加中工作和同步了
+
+# 提交更改
+
+当你在文件夹中修改完成后，打开文件夹中的 .Rproj 文件进入 Rstudio - git图标（搜索框右边） - Commit - 选择要更改的文件 - 填写更改说明 - Commit
+
+再点击右上角 push，如有弹出框则按照说明填写 github 用户名、邮箱和密码即可
+
+- commit：确认更改，并将更改提交到本地缓存中
+
+- push：将本地的更改提交到云端
+
+- pull：将云端拉回到本地
+
