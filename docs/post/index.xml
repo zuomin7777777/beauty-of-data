@@ -6,8 +6,72 @@
     <description>Recent content in Posts on Beauty of Data</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 28 Feb 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Mar 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>R High Performance Programming Note 1</title>
+      <link>/2017/03/10/r-high-performance-programming-note-1/</link>
+      <pubDate>Fri, 10 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/03/10/r-high-performance-programming-note-1/</guid>
+      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
+&lt;!-- /BLOGDOWN-HEAD --&gt;
+
+&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
+&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
+&lt;div id=&#34;r-&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;1. R 的性能瓶颈&lt;/h1&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;R 是一种解释性语言&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;R 是一种解释性语言，从源代码开始，用户只需执行源代码，程序将其解析为 RAM 中的对象，经过评估无误后解释为机器代码，由 CPU 执行；&lt;/p&gt;
+&lt;p&gt;而编译型语言从源代码开始，用户需要先将其编译为机器代码，然后再执行该机器代码。&lt;/p&gt;
+&lt;p&gt;解释性语言的好处是用户操作简便灵活，而编译型语言由于执行时无需进行解释，运行更快。&lt;/p&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;R 是单线程的&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;R 中大多数函数都是串行运行，默认状况下无法利用到多个核心。&lt;/p&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;R 需要将所有数据载入内存&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;不仅是原始数据，R 的计算结果也需要保存在内存中，内存大小限制了 R 所能处理的最大数据量。&lt;/p&gt;
+&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;算法影响&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;算法的时间复杂度和空间复杂度对 R 代码的性能有巨大的影响，如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;fibonacci_rec &amp;lt;- function(n){
+  if (n &amp;lt;= 1){
+    return(n)
+  }
+  return (fibonacci_rec(n-1) + fibonacci_rec(n-2))
+}
+microbenchmark::microbenchmark(fibonacci_rec(25), unit = &amp;quot;ms&amp;quot;)
+#Unit: milliseconds
+#              expr      min       lq       mean    median       uq      max neval
+# fibonacci_seq(25) 0.034835 0.037635 0.04349417 0.0440105 0.046343 0.108236   100&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 不重复计算
+fibonacci_seq &amp;lt;- function(n) {
+  if(n &amp;lt;= 1){
+    return(n)
+  }
+  fib &amp;lt;- rep.int(NA_real_, n+1)
+  fib[1] &amp;lt;- 0
+  fib[2] &amp;lt;- 1
+  for (i in 2:n){
+    fib[i + 1] &amp;lt;- fib[i] + fib[i - 1]
+  }
+  return(fib[n+1])
+}
+microbenchmark::microbenchmark(fibonacci_seq(25), unit = &amp;quot;ms&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Unit: milliseconds
+##               expr      min       lq      mean   median       uq      max
+##  fibonacci_seq(25) 0.035457 0.038723 0.0432267 0.042144 0.043855 0.080245
+##  neval
+##    100&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>THREE THINGS I WISH I KNEW EARLIER ABOUT MACHINE LEARNING</title>
@@ -116,9 +180,8 @@ data &amp;lt;- data[-c(5,6)]&lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;一个简单可用的版本&lt;/h3&gt;
 &lt;p&gt;以下代码起到一个初始化的作用，使用时只需要改data为你自己需要填补缺失值的数据集名称&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(mice)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: 程辑包&amp;#39;mice&amp;#39;是用R版本3.3.3 来建造的&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## 载入需要的程辑包：methods&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## 载入需要的程辑包：Rcpp&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## mice 2.25 2015-11-09&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;init = mice(data, maxit=0)
 meth = init$method
 predM = init$predictorMatrix&lt;/code&gt;&lt;/pre&gt;
@@ -210,6 +273,7 @@ apply(data,2,miss)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;strong&gt;假如&lt;/strong&gt; 第三行的数据410111，表示有4个样本满足这行的缺失模式，1011表示这行的缺失模式是缺失了Solar.R变量，最右边的1表示这种缺失模式缺失了1个变量数据。&lt;/p&gt;
 &lt;p&gt;可以用VIM包获得缺失值的可视化表示&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(VIM)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: 程辑包&amp;#39;VIM&amp;#39;是用R版本3.3.3 来建造的&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## 载入需要的程辑包：colorspace&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## 载入需要的程辑包：grid&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## 载入需要的程辑包：data.table&lt;/code&gt;&lt;/pre&gt;

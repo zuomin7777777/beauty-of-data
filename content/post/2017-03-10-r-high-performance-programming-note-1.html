@@ -1,0 +1,62 @@
+---
+title: R High Performance Programming Note 1
+author: "王泽贤"
+date: '2017-03-10'
+slug: r-high-performance-programming-note-1
+---
+
+<!-- BLOGDOWN-HEAD -->
+<!-- /BLOGDOWN-HEAD -->
+
+<!-- BLOGDOWN-BODY-BEFORE -->
+<!-- /BLOGDOWN-BODY-BEFORE -->
+<div id="r-" class="section level1">
+<h1>1. R 的性能瓶颈</h1>
+<ol style="list-style-type: decimal">
+<li>R 是一种解释性语言</li>
+</ol>
+<p>R 是一种解释性语言，从源代码开始，用户只需执行源代码，程序将其解析为 RAM 中的对象，经过评估无误后解释为机器代码，由 CPU 执行；</p>
+<p>而编译型语言从源代码开始，用户需要先将其编译为机器代码，然后再执行该机器代码。</p>
+<p>解释性语言的好处是用户操作简便灵活，而编译型语言由于执行时无需进行解释，运行更快。</p>
+<ol start="2" style="list-style-type: decimal">
+<li>R 是单线程的</li>
+</ol>
+<p>R 中大多数函数都是串行运行，默认状况下无法利用到多个核心。</p>
+<ol start="3" style="list-style-type: decimal">
+<li>R 需要将所有数据载入内存</li>
+</ol>
+<p>不仅是原始数据，R 的计算结果也需要保存在内存中，内存大小限制了 R 所能处理的最大数据量。</p>
+<ol start="4" style="list-style-type: decimal">
+<li>算法影响</li>
+</ol>
+<p>算法的时间复杂度和空间复杂度对 R 代码的性能有巨大的影响，如：</p>
+<pre><code>fibonacci_rec &lt;- function(n){
+  if (n &lt;= 1){
+    return(n)
+  }
+  return (fibonacci_rec(n-1) + fibonacci_rec(n-2))
+}
+microbenchmark::microbenchmark(fibonacci_rec(25), unit = &quot;ms&quot;)
+#Unit: milliseconds
+#              expr      min       lq       mean    median       uq      max neval
+# fibonacci_seq(25) 0.034835 0.037635 0.04349417 0.0440105 0.046343 0.108236   100</code></pre>
+<pre class="r"><code># 不重复计算
+fibonacci_seq &lt;- function(n) {
+  if(n &lt;= 1){
+    return(n)
+  }
+  fib &lt;- rep.int(NA_real_, n+1)
+  fib[1] &lt;- 0
+  fib[2] &lt;- 1
+  for (i in 2:n){
+    fib[i + 1] &lt;- fib[i] + fib[i - 1]
+  }
+  return(fib[n+1])
+}
+microbenchmark::microbenchmark(fibonacci_seq(25), unit = &quot;ms&quot;)</code></pre>
+<pre><code>## Unit: milliseconds
+##               expr      min       lq      mean   median       uq      max
+##  fibonacci_seq(25) 0.035457 0.038723 0.0432267 0.042144 0.043855 0.080245
+##  neval
+##    100</code></pre>
+</div>

@@ -61,9 +61,8 @@ data &lt;- data[-c(5,6)]</code></pre>
 <h3>一个简单可用的版本</h3>
 <p>以下代码起到一个初始化的作用，使用时只需要改data为你自己需要填补缺失值的数据集名称</p>
 <pre class="r"><code>library(mice)</code></pre>
+<pre><code>## Warning: 程辑包&#39;mice&#39;是用R版本3.3.3 来建造的</code></pre>
 <pre><code>## 载入需要的程辑包：methods</code></pre>
-<pre><code>## 载入需要的程辑包：Rcpp</code></pre>
-<pre><code>## mice 2.25 2015-11-09</code></pre>
 <pre class="r"><code>init = mice(data, maxit=0)
 meth = init$method
 predM = init$predictorMatrix</code></pre>
@@ -155,6 +154,7 @@ apply(data,2,miss)</code></pre>
 <p><strong>假如</strong> 第三行的数据410111，表示有4个样本满足这行的缺失模式，1011表示这行的缺失模式是缺失了Solar.R变量，最右边的1表示这种缺失模式缺失了1个变量数据。</p>
 <p>可以用VIM包获得缺失值的可视化表示</p>
 <pre class="r"><code>library(VIM)</code></pre>
+<pre><code>## Warning: 程辑包&#39;VIM&#39;是用R版本3.3.3 来建造的</code></pre>
 <pre><code>## 载入需要的程辑包：colorspace</code></pre>
 <pre><code>## 载入需要的程辑包：grid</code></pre>
 <pre><code>## 载入需要的程辑包：data.table</code></pre>
