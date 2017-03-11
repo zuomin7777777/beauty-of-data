@@ -100,6 +100,9 @@ git config --global user.email &amp;quot;elara15598@gmail.com&amp;quot;&lt;/code
 &lt;p&gt;如果你用的是 SS：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;git config --global http.proxy &amp;#39;socks5://127.0.0.1:1080&amp;#39; 
 git config --global https.proxy &amp;#39;socks5://127.0.0.1:1080&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果你要取消代理：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git config --global --unset http.proxy
+git config --global --unset https.proxy&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;其他方式可以试试打开全局代理来加速（厦大图书馆 vpn 貌似走的是 CN2 专线宽带，可能有神秘力量）&lt;/p&gt;
 &lt;p&gt;当然不代理也行，就是&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;~&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;~&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;慢&lt;/p&gt;
 &lt;/div&gt;

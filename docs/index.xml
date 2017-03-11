@@ -68,8 +68,8 @@ fibonacci_seq &amp;lt;- function(n) {
 }
 microbenchmark::microbenchmark(fibonacci_seq(25), unit = &amp;quot;ms&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Unit: milliseconds
-##               expr      min      lq       mean   median        uq      max
-##  fibonacci_seq(25) 0.034524 0.03779 0.04019734 0.040278 0.0424555 0.060962
+##               expr      min       lq       mean   median      uq      max
+##  fibonacci_seq(25) 0.073143 0.075852 0.09115795 0.090751 0.09346 0.196402
 ##  neval
 ##    100&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;可以看到代码的优化可以产生巨大的加速效果&lt;/p&gt;
@@ -169,6 +169,9 @@ git config --global user.email &amp;quot;elara15598@gmail.com&amp;quot;&lt;/code
 &lt;p&gt;如果你用的是 SS：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;git config --global http.proxy &amp;#39;socks5://127.0.0.1:1080&amp;#39; 
 git config --global https.proxy &amp;#39;socks5://127.0.0.1:1080&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果你要取消代理：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git config --global --unset http.proxy
+git config --global --unset https.proxy&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;其他方式可以试试打开全局代理来加速（厦大图书馆 vpn 貌似走的是 CN2 专线宽带，可能有神秘力量）&lt;/p&gt;
 &lt;p&gt;当然不代理也行，就是&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;~&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;&lt;sub&gt;~&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;&lt;/sub&gt;慢&lt;/p&gt;
 &lt;/div&gt;
@@ -311,8 +314,9 @@ data &amp;lt;- data[-c(5,6)]&lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;一个简单可用的版本&lt;/h3&gt;
 &lt;p&gt;以下代码起到一个初始化的作用，使用时只需要改data为你自己需要填补缺失值的数据集名称&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(mice)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning: 程辑包&amp;#39;mice&amp;#39;是用R版本3.3.3 来建造的&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## 载入需要的程辑包：methods&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 载入需要的程辑包：Rcpp&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## mice 2.25 2015-11-09&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;init = mice(data, maxit=0)
 meth = init$method
 predM = init$predictorMatrix&lt;/code&gt;&lt;/pre&gt;
@@ -404,7 +408,6 @@ apply(data,2,miss)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;strong&gt;假如&lt;/strong&gt; 第三行的数据410111，表示有4个样本满足这行的缺失模式，1011表示这行的缺失模式是缺失了Solar.R变量，最右边的1表示这种缺失模式缺失了1个变量数据。&lt;/p&gt;
 &lt;p&gt;可以用VIM包获得缺失值的可视化表示&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(VIM)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning: 程辑包&amp;#39;VIM&amp;#39;是用R版本3.3.3 来建造的&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## 载入需要的程辑包：colorspace&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## 载入需要的程辑包：grid&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## 载入需要的程辑包：data.table&lt;/code&gt;&lt;/pre&gt;

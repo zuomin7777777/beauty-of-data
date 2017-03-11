@@ -102,6 +102,13 @@ git config --global http.proxy 'socks5://127.0.0.1:1080'
 git config --global https.proxy 'socks5://127.0.0.1:1080'
 ```
 
+如果你要取消代理：
+
+```
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+```
+
 其他方式可以试试打开全局代理来加速（厦大图书馆 vpn 貌似走的是 CN2 专线宽带，可能有神秘力量）
 
 当然不代理也行，就是~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~慢
